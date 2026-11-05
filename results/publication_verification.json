@@ -67,15 +67,16 @@
         "README.md",
         "docs/WORLD_MODEL_DERIVATION.md"
       ],
-      "github_gfm_api": "all 33 display expressions recognized as math-renderer nodes",
+      "github_gfm_api": "all 34 display expressions recognized as math-renderer nodes",
       "mathjax_version": "3.2.2",
-      "expressions_checked": 89,
-      "display_expressions_checked": 33,
+      "expressions_checked": 102,
+      "display_expressions_checked": 34,
       "errors": 0,
-      "svg_previews_reviewed": 33,
-      "formatting": "math fences; explicit cases rows; aligned long equations; upright clip/vec names",
+      "svg_previews_reviewed": 3,
+      "formatting": "Piecewise definitions replaced by equivalent indicator-function expressions; no cases environments remain in README or derivation.",
       "browser_limitation": "Live browser connection timed out; validation uses exact TeX from GitHub GFM API output and locally rendered MathJax SVG previews. No live-browser success claimed.",
-      "change_scope": "Documentation formatting only; no model, trajectory, training or numerical result changed."
+      "change_scope": "Documentation formatting only; no model, trajectory, training or numerical result changed.",
+      "validation_limit": "The previous local MathJax pass did not establish GitHub browser compatibility: user reported a remaining cases rendering failure. This revision eliminates that environment instead of claiming the prior validation covered it."
     }
   }
 }

@@ -33,16 +33,16 @@ flowchart LR
 
 状态为 $s_t=(g_t,v_t,v_t^L,a_t)$：净间距、自车速度、前车速度、执行器内部加速度。采样周期 $\Delta t=0.1$ 秒，期望加速度 $u_t\in[-6,2]$ m/s²。由 $\dot g=v^L-v,\dot v=a,\dot a=(u-a)/\tau$ 得到显式 Euler 转移。
 
-物理执行器考虑加速/制动不对称与速度相关响应：
+物理执行器考虑加速/制动不对称与速度相关响应。用指标函数表示两个分支：条件成立时 $\mathbf{1}[P]=1$，否则为 0。
 
 ```math
-\begin{aligned}
-\tau_t&=(1+\kappa v_t)\begin{cases}
-\tau_+, & u_t\ge a_t, \\
-\tau_-, & u_t<a_t
-\end{cases}, \\
-a^{\mathrm{phys}}_{t+1}&=a_t+\frac{\Delta t(u_t-a_t)}{\max(\Delta t,\tau_t)}.
-\end{aligned}
+\tau_t=(1+\kappa v_t)\left[\tau_-+(\tau_+-\tau_-)\mathbf{1}[u_t\ge a_t]\right].
+```
+
+因此，加速分支取 $\tau_+(1+\kappa v_t)$，制动分支取 $\tau_-(1+\kappa v_t)$。执行器的一步预测为：
+
+```math
+a^{\mathrm{phys}}_{t+1}=a_t+\frac{\Delta t(u_t-a_t)}{\max(\Delta t,\tau_t)}.
 ```
 
 $(\tau_+,\tau_-,\kappa)$ 仅在 train 上用一步转移最小二乘辨识。ID 合成数据约得 $(0.45,0.75,0.045)$，不是小车实测参数。

@@ -57,18 +57,13 @@ $\mathcal S$ 是所有方法共用的独立安全过滤器，必要时覆盖为�
 
 ### 2.1 物理执行器的辨识
 
-采用加速/制动不对称且随车速变化的一阶响应：
+采用加速/制动不对称且随车速变化的一阶响应。记指标函数 $\mathbf{1}[P]$ 在条件成立时为 1，否则为 0；参数为 $\theta=(\tau_+,\tau_-,\kappa)$。
 
 ```math
-\begin{aligned}
-\tau_\theta(v,u,a)&=(1+\kappa v)
-\begin{cases}
-\tau_+, & u\geq a, \\
-\tau_-, & u<a
-\end{cases}, \\
-\theta&=(\tau_+,\tau_-,\kappa).
-\end{aligned}
+\tau_\theta(v,u,a)=(1+\kappa v)\left[\tau_-+(\tau_+-\tau_-)\mathbf{1}[u\geq a]\right].
 ```
+
+当 $u\geq a$ 时，方括号化为 $\tau_+$；其余情况化为 $\tau_-$。这与加速/制动分段定义完全等价。
 
 参数仅从 train 的一步转移辨识：
 
@@ -174,12 +169,13 @@ c=0.01e_g^2+0.1e_v^2+0.01u_t^2+0.1(u_t-u_{t-1})^2
 +100\mathbf1[g_+\leq0]+10e_b^2,
 ```
 
+令碰撞指标 $I_c=\mathbf{1}[g_+\leq0]$，则奖励的等价表达为：
+
 ```math
-r=\begin{cases}
--100, & g_+\leq0, \\
-1-\min(2,c/10), & g_+>0.
-\end{cases}
+r=-100I_c+(1-I_c)\left[1-\min(2,c/10)\right].
 ```
+
+碰撞时 $I_c=1$，奖励为 −100；未碰撞时 $I_c=0$，奖励为 $1-\min(2,c/10)$。
 
 训练统一用 $\bar r=0.01r$；评估始终用原始 $r$。模型只学转移，奖励按已知同一公式计算，没有单独训练奖励网络。
 
