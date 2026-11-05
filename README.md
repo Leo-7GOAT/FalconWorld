@@ -35,35 +35,44 @@ flowchart LR
 
 物理执行器考虑加速/制动不对称与速度相关响应：
 
-$$
-\tau_t=\begin{cases}\tau_+,&u_t\ge a_t,\\\tau_-,&u_t<a_t\end{cases}(1+\kappa v_t),\qquad
-a^{\mathrm{phys}}_{t+1}=a_t+\frac{\Delta t(u_t-a_t)}{\max(\Delta t,\tau_t)}.
-$$
+```math
+\begin{aligned}
+\tau_t&=(1+\kappa v_t)\begin{cases}
+\tau_+, & u_t\ge a_t, \\
+\tau_-, & u_t<a_t
+\end{cases}, \\
+a^{\mathrm{phys}}_{t+1}&=a_t+\frac{\Delta t(u_t-a_t)}{\max(\Delta t,\tau_t)}.
+\end{aligned}
+```
 
 $(\tau_+,\tau_-,\kappa)$ 仅在 train 上用一步转移最小二乘辨识。ID 合成数据约得 $(0.45,0.75,0.045)$，不是小车实测参数。
 
 模型包含两个小型 tanh MLP：自车残差头 4→32→1，前车历史头 6→32→1。
 
-$$
-z_t=[v_t,a_t,u_t,u_t-a_t],\qquad
-q_t=[v_t^L,v_{t-4}^L-v_{t-5}^L,\ldots,v_t^L-v_{t-1}^L].
-$$
+```math
+\begin{aligned}
+z_t&=[v_t,a_t,u_t,u_t-a_t], \\
+q_t&=[v_t^L,v_{t-4}^L-v_{t-5}^L,\ldots,v_t^L-v_{t-1}^L].
+\end{aligned}
+```
 
-$$
-\widehat a_{t+1}=\operatorname{clip}(a^{\mathrm{phys}}_{t+1}+R_\omega(z_t),-6,2),\qquad
-\widehat{\Delta v_t^L}=\operatorname{clip}(L_\eta(q_t),-0.6,0.2).
-$$
+```math
+\begin{aligned}
+\widehat a_{t+1}&=\mathrm{clip}(a^{\mathrm{phys}}_{t+1}+R_\omega(z_t),-6,2), \\
+\widehat{\Delta v_t^L}&=\mathrm{clip}(L_\eta(q_t),-0.6,0.2).
+\end{aligned}
+```
 
 完整世界模型为
 
-$$
+```math
 \widehat s_{t+1}=\begin{bmatrix}
 g_t+\Delta t(v_t^L-v_t)\\
 \max(0,v_t+\Delta t a_t)\\
 \max(0,v_t^L+\widehat{\Delta v_t^L})\\
 \widehat a_{t+1}
 \end{bmatrix}.
-$$
+```
 
 **速度更新使用旧 $a_t$；前车头输出速度增量，不再乘一次 $\Delta t$。** 六帧历史因果递归更新，不读取真实未来、场景标签或隐藏条件。网络按标准化的一步监督 MSE 拟合；尺度只来自 train，val 早停，test 隔离。当前物理模型已准确解释 ID 自车动力学，残差约为数值零，这一负结果保留。
 
@@ -73,27 +82,33 @@ $$
 
 观测为六帧四维状态加上一次实际加速度命令，共 25 维；采用固定尺度，不裁剪 OOD 输入。Actor、critic 分别使用 64×64 tanh 隐层。Actor 输出五分类加速度**增量**：
 
-$$
-\Delta u_j\in\{-0.8,-0.4,0,0.4,0.8\},\qquad
-u_t=\mathcal S\!\left(s_t,\operatorname{clip}(u_{t-1}+\Delta u_j,-6,2)\right).
-$$
+```math
+\begin{aligned}
+\Delta u_j&\in\{-0.8,-0.4,0,0.4,0.8\}, \\
+u_t&=\mathcal S\!\left(s_t,\mathrm{clip}(u_{t-1}+\Delta u_j,-6,2)\right).
+\end{aligned}
+```
 
 $\mathcal S$ 为公共安全过滤器，不是形式化安全保证。当前策略不输出航向或转角；$a_t$ 是仿真特权输入，实车需要另外估计。
 
 每轮先采集 2048 条在线模拟器转移，再用**同一个尚未更新的行为策略**从本轮观测池抽根，生成一步模型分支。主方法用 1024 条合成样本替换学习 buffer 的一半；真实轨迹与每条模型分支分别计算 GAE，再调用官方 PPO 优化器。没有额外策略更新，不把不同分支拼成连续轨迹，也不混入旧策略离线 replay。
 
-$$
-\delta_i=\bar r_i+\gamma(1-d_i)V_{\rm old}(o_{i+1})-V_{\rm old}(o_i),\qquad
-\widehat A_i=\delta_i+\gamma\lambda(1-b_i)\widehat A_{i+1}.
-$$
+```math
+\begin{aligned}
+\delta_i&=\bar r_i+\gamma(1-d_i)V_{\rm old}(o_{i+1})-V_{\rm old}(o_i), \\
+\widehat A_i&=\delta_i+\gamma\lambda(1-b_i)\widehat A_{i+1}.
+\end{aligned}
+```
 
 $d_i$ 表示真正终止，$b_i$ 切断跨 episode/分支的优势链；碰撞不 bootstrap，时间截断及非终止分支末端保留最终状态 bootstrap。训练统一 $\bar r=0.01r$，评估使用未缩放原始回报；$\gamma=0.99,\lambda=0.95$。
 
-$$
-\rho_i(\phi)=\frac{\pi_\phi(j_i\mid o_i)}{\pi_{\rm old}(j_i\mid o_i)},\qquad
-L^{\rm clip}=\mathbb E_{D_{\rm mix}}\left[
-\min\{\rho_i\widehat A_i,\operatorname{clip}(\rho_i,0.8,1.2)\widehat A_i\}\right].
-$$
+```math
+\begin{aligned}
+\rho_i(\phi)&=\frac{\pi_\phi(j_i\mid o_i)}{\pi_{\rm old}(j_i\mid o_i)}, \\
+L^{\rm clip}&=\mathbb E_{D_{\rm mix}}\left[
+\min\{\rho_i\widehat A_i,\mathrm{clip}(\rho_i,0.8,1.2)\widehat A_i\}\right].
+\end{aligned}
+```
 
 实现沿用 SB3 的 minibatch 优势标准化、value MSE、Adam 和梯度裁剪。主方法 buffer、epochs、batch 和实际 Adam 次数与纯 PPO 相同。混合样本分布和短分支 GAE 改变了训练目标，因此它是模型辅助 PPO 变体，不能宣称原始 PPO 无偏性或 MBPO 性能定理直接适用。
 
@@ -111,10 +126,10 @@ $$
 
 在固定非终止区域、确定性转移且 value 为 $L_V$-Lipschitz 等假设下，由三角不等式有一步目标偏差界：
 
-$$
+```math
 |\widehat{\mathcal T}^{\pi}V-\mathcal T^{\pi}V|
 \le\mathbb E_{j\sim\pi}\left[|\widehat r-r|+\gamma L_V\|\widehat F-F\|\right].
-$$
+```
 
 同动作序列下，若单步误差至多 $\varepsilon$、真实转移 Lipschitz 常数为 $L_F$，则 $e_k\le\varepsilon\sum_{j=0}^{k-1}L_F^j$。短分支限制开环误差传播，但更依赖 critic；碰撞边界不连续，不能直接套全局平滑界。这是有条件误差分析，**不是性能改善证明**；完整假设见 [推导第 4 节](docs/WORLD_MODEL_DERIVATION.md#4-为什么有潜在帮助又为什么不保证改善)。
 

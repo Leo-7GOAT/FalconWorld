@@ -60,6 +60,22 @@
         "missing_local_links": [],
         "display_math_delimiters": 0
       }
+    },
+    "documentation_math": {
+      "date": "2026-11-05",
+      "scope": [
+        "README.md",
+        "docs/WORLD_MODEL_DERIVATION.md"
+      ],
+      "github_gfm_api": "all 33 display expressions recognized as math-renderer nodes",
+      "mathjax_version": "3.2.2",
+      "expressions_checked": 89,
+      "display_expressions_checked": 33,
+      "errors": 0,
+      "svg_previews_reviewed": 33,
+      "formatting": "math fences; explicit cases rows; aligned long equations; upright clip/vec names",
+      "browser_limitation": "Live browser connection timed out; validation uses exact TeX from GitHub GFM API output and locally rendered MathJax SVG previews. No live-browser success claimed.",
+      "change_scope": "Documentation formatting only; no model, trajectory, training or numerical result changed."
     }
   }
 }
