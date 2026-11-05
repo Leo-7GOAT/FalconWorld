@@ -1,0 +1,65 @@
+{
+  "scope": "Frozen research publication; no full retraining, vehicle IO, Pi timing or fresh-machine dependency acceptance.",
+  "environment": {
+    "os": "Windows",
+    "python": "3.11.9",
+    "torch": "2.15.0+cpu",
+    "stable-baselines3": "2.9.2",
+    "gymnasium": "1.4.0",
+    "pytest": "9.1.1"
+  },
+  "checks": {
+    "tests": {
+      "command": "python -m pytest -q",
+      "exit_code": 0,
+      "passed": 130,
+      "subtests_passed": 31,
+      "elapsed_s": 31.39
+    },
+    "standard_audit": {
+      "command": "python scripts/audit_sb3_rl.py --run results/sb3_standard --output outputs/published_standard_audit",
+      "exit_code": 0,
+      "status": "verified_complete",
+      "expected_jobs": 21,
+      "completed_jobs": 21,
+      "expected_test_episodes": 1680,
+      "audited_test_episodes": 1680,
+      "error_count": 0
+    },
+    "reference_audit": {
+      "command": "python scripts/audit_sb3_reference.py --run results/ppo_reference_204800 --output outputs/published_reference_audit",
+      "exit_code": 0,
+      "status": "verified_complete",
+      "expected_jobs": 3,
+      "completed_jobs": 3,
+      "expected_test_episodes": 240,
+      "audited_test_episodes": 240,
+      "error_count": 0
+    },
+    "policy_load": {
+      "command": "python scripts/evaluate_sb3_policy.py --checkpoint results/sb3_standard/seed0/wm_ppo/final_policy.zip --output outputs/published_policy_check --split val",
+      "exit_code": 0,
+      "checkpoint_sha256": "65a9071f69436122c1324dc82d093a6dc359b32ecb8a55aaad0ee77569c26ca6",
+      "evaluated_episodes": 16
+    },
+    "privacy_scan": {
+      "secret_patterns_found": 0,
+      "personal_path_candidates_found": 0,
+      "checkpoints_scanned": 24
+    },
+    "readme_links": {
+      "README.md": {
+        "missing_local_links": [],
+        "display_math_delimiters": 16
+      },
+      "docs/WORLD_MODEL_DERIVATION.md": {
+        "missing_local_links": [],
+        "display_math_delimiters": 50
+      },
+      "results/README.md": {
+        "missing_local_links": [],
+        "display_math_delimiters": 0
+      }
+    }
+  }
+}

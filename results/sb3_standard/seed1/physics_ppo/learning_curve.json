@@ -1,0 +1,54 @@
+[
+  {
+    "method": "physics_ppo",
+    "training_seed": 1,
+    "new_real_steps": 16384,
+    "policy_updates": 2560,
+    "synthetic_generated": 8192,
+    "mean_return": -26.79913182104096,
+    "collision_rate": 0.625,
+    "completion_rate": 0.375,
+    "progress_m": 98.40991079094599,
+    "training_wall_s": 29.739410300004238,
+    "model_generation_wall_s": 8.991224400007923
+  },
+  {
+    "method": "physics_ppo",
+    "training_seed": 1,
+    "new_real_steps": 32768,
+    "policy_updates": 5120,
+    "synthetic_generated": 16384,
+    "mean_return": 3.326839429874461,
+    "collision_rate": 0.5,
+    "completion_rate": 0.5,
+    "progress_m": 104.8938581488904,
+    "training_wall_s": 60.24102720000519,
+    "model_generation_wall_s": 17.72261730000173
+  },
+  {
+    "method": "physics_ppo",
+    "training_seed": 1,
+    "new_real_steps": 49152,
+    "policy_updates": 7680,
+    "synthetic_generated": 24576,
+    "mean_return": 4.810285508000419,
+    "collision_rate": 0.5,
+    "completion_rate": 0.5,
+    "progress_m": 101.70860226762935,
+    "training_wall_s": 88.6618873999978,
+    "model_generation_wall_s": 26.055242400005227
+  },
+  {
+    "method": "physics_ppo",
+    "training_seed": 1,
+    "new_real_steps": 65536,
+    "policy_updates": 10240,
+    "synthetic_generated": 32768,
+    "mean_return": 21.868720964027887,
+    "collision_rate": 0.375,
+    "completion_rate": 0.625,
+    "progress_m": 108.66058686780372,
+    "training_wall_s": 123.89652859998023,
+    "model_generation_wall_s": 36.42919890002668
+  }
+]

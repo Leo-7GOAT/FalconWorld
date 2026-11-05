@@ -1,0 +1,17 @@
+{
+  "command": ".venv/Scripts/python.exe reproduce_sb3_rl.py --preset standard --workers 3",
+  "exit_code": 0,
+  "mode": "reuse complete frozen jobs; recompute aggregate analysis and independent audit",
+  "full_suite_final_tests": 130,
+  "subtests": 31,
+  "primary_jobs": 21,
+  "primary_test_episodes": 1680,
+  "extra_reference_jobs": 3,
+  "extra_reference_test_episodes": 240,
+  "sources": {
+    "reproduce_sb3_rl.py": "73c78146838a4d21afecafd04f29bf2ff12c62e69363924ec668a6c4a843b137",
+    "run_sb3_rl.py": "9bdd9b3135ba0589e652035043ca5354643d4c0d51f3637d4512ab25813d9738",
+    "scripts/audit_sb3_rl.py": "b82b0e1fd63659b191d83cd36f4ef5c912aa9c64ebf18ceee19eba6ef8044a66",
+    "setup_rl.ps1": "7f63713ae1b81422ec807305830547d18924292b3bb94f477932451131019e76"
+  }
+}

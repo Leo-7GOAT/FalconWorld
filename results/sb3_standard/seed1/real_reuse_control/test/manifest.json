@@ -1,0 +1,415 @@
+{
+  "method": "real_reuse_control",
+  "training_seed": 1,
+  "cases": [
+    {
+      "seed": 8100000,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100001,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100002,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100003,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100004,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100005,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100006,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100007,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100008,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8100009,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 8101000,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101001,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101002,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101003,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101004,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101005,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101006,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101007,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101008,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8101009,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 8102000,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102001,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102002,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102003,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102004,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102005,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102006,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102007,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102008,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8102009,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 8103000,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103001,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103002,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103003,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103004,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103005,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103006,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103007,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103008,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8103009,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 8110000,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110001,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110002,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110003,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110004,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110005,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110006,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110007,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110008,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8110009,
+      "family": "constant",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111000,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111001,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111002,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111003,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111004,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111005,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111006,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111007,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111008,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8111009,
+      "family": "mild",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112000,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112001,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112002,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112003,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112004,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112005,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112006,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112007,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112008,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8112009,
+      "family": "brake",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113000,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113001,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113002,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113003,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113004,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113005,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113006,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113007,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113008,
+      "family": "stopgo",
+      "condition": "ood"
+    },
+    {
+      "seed": 8113009,
+      "family": "stopgo",
+      "condition": "ood"
+    }
+  ],
+  "max_steps": 120,
+  "reward_version": "longitudinal-rl-reward-v2-bounded-survival",
+  "policy": "final checkpoint, greedy explore=False; no test selection",
+  "observation": "privileged simulator six [gap,ego,lead,actuator] frames plus previous applied u",
+  "timing": "cycle includes encoding, policy, safety and truth simulator step; no device IO",
+  "source_sha256": {
+    "rl_env.py": "bc8ba85ce8e901e8a8e29533befaf4032bca8c05ad4319dd7f5b7627abb6a58b",
+    "rl_evaluation.py": "62d7fc0d88be92247bdc1e9ea77c56aa7b6291017eacbbc03d10adbcc2dd5b29"
+  }
+}

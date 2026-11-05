@@ -1,0 +1,8 @@
+{
+  "expected_jobs": 3,
+  "completed_jobs": 3,
+  "expected_episodes": 240,
+  "actual_episodes": 240,
+  "unique_episodes": 240,
+  "verified_complete": true
+}

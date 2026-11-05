@@ -1,0 +1,54 @@
+[
+  {
+    "method": "ppo_total_budget",
+    "training_seed": 2,
+    "new_real_steps": 18432,
+    "policy_updates": 2880,
+    "synthetic_generated": 0,
+    "mean_return": -13.972100746186719,
+    "collision_rate": 0.5,
+    "completion_rate": 0.5,
+    "progress_m": 95.39389640698454,
+    "training_wall_s": 25.712714400004188,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo_total_budget",
+    "training_seed": 2,
+    "new_real_steps": 36864,
+    "policy_updates": 5760,
+    "synthetic_generated": 0,
+    "mean_return": 63.61136116846341,
+    "collision_rate": 0.0,
+    "completion_rate": 1.0,
+    "progress_m": 95.32455356373202,
+    "training_wall_s": 52.030003599997144,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo_total_budget",
+    "training_seed": 2,
+    "new_real_steps": 55296,
+    "policy_updates": 8640,
+    "synthetic_generated": 0,
+    "mean_return": 70.1051230224238,
+    "collision_rate": 0.0,
+    "completion_rate": 1.0,
+    "progress_m": 97.77801022656416,
+    "training_wall_s": 78.85484270000597,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo_total_budget",
+    "training_seed": 2,
+    "new_real_steps": 72311,
+    "policy_updates": 11300,
+    "synthetic_generated": 0,
+    "mean_return": 69.2474311310357,
+    "collision_rate": 0.0,
+    "completion_rate": 1.0,
+    "progress_m": 97.6607747845348,
+    "training_wall_s": 105.20684520001669,
+    "model_generation_wall_s": 0.0
+  }
+]

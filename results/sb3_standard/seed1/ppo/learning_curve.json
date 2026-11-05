@@ -1,0 +1,54 @@
+[
+  {
+    "method": "ppo",
+    "training_seed": 1,
+    "new_real_steps": 16384,
+    "policy_updates": 2560,
+    "synthetic_generated": 0,
+    "mean_return": -17.37550150717422,
+    "collision_rate": 0.625,
+    "completion_rate": 0.375,
+    "progress_m": 105.52820685076269,
+    "training_wall_s": 20.566443900002923,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo",
+    "training_seed": 1,
+    "new_real_steps": 32768,
+    "policy_updates": 5120,
+    "synthetic_generated": 0,
+    "mean_return": -17.37550150717422,
+    "collision_rate": 0.625,
+    "completion_rate": 0.375,
+    "progress_m": 105.52820685076269,
+    "training_wall_s": 44.874136099999305,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo",
+    "training_seed": 1,
+    "new_real_steps": 49152,
+    "policy_updates": 7680,
+    "synthetic_generated": 0,
+    "mean_return": -16.6415100080571,
+    "collision_rate": 0.625,
+    "completion_rate": 0.375,
+    "progress_m": 105.74659256140413,
+    "training_wall_s": 70.88980590000574,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo",
+    "training_seed": 1,
+    "new_real_steps": 65536,
+    "policy_updates": 10240,
+    "synthetic_generated": 0,
+    "mean_return": -16.648050778461066,
+    "collision_rate": 0.625,
+    "completion_rate": 0.375,
+    "progress_m": 105.74888672549042,
+    "training_wall_s": 97.93652009999641,
+    "model_generation_wall_s": 0.0
+  }
+]

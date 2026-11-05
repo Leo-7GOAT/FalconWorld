@@ -1,0 +1,13 @@
+{
+  "expected_jobs": 21,
+  "completed_jobs": 21,
+  "expected_episodes": 1680,
+  "actual_episodes": 1680,
+  "unique_episodes": 1680,
+  "missing_episode_count": 0,
+  "unexpected_episode_count": 0,
+  "duplicate_episode_count": 0,
+  "missing_jobs": [],
+  "verified_complete": true,
+  "budget_mismatches": []
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "method": "ppo",
+    "training_seed": 2,
+    "new_real_steps": 51200,
+    "policy_updates": 8000,
+    "synthetic_generated": 0,
+    "mean_return": 70.50915586272708,
+    "collision_rate": 0.0,
+    "completion_rate": 1.0,
+    "progress_m": 96.5871820308287,
+    "training_wall_s": 46.38942570000654,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo",
+    "training_seed": 2,
+    "new_real_steps": 102400,
+    "policy_updates": 16000,
+    "synthetic_generated": 0,
+    "mean_return": 69.30398042141516,
+    "collision_rate": 0.0,
+    "completion_rate": 1.0,
+    "progress_m": 99.26573512913009,
+    "training_wall_s": 92.11844539995946,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo",
+    "training_seed": 2,
+    "new_real_steps": 153600,
+    "policy_updates": 24000,
+    "synthetic_generated": 0,
+    "mean_return": 56.04967520885256,
+    "collision_rate": 0.125,
+    "completion_rate": 0.875,
+    "progress_m": 101.42673748340098,
+    "training_wall_s": 138.69746149993443,
+    "model_generation_wall_s": 0.0
+  },
+  {
+    "method": "ppo",
+    "training_seed": 2,
+    "new_real_steps": 204800,
+    "policy_updates": 32000,
+    "synthetic_generated": 0,
+    "mean_return": 65.390158162653,
+    "collision_rate": 0.0,
+    "completion_rate": 1.0,
+    "progress_m": 102.61741268624414,
+    "training_wall_s": 185.33579599992663,
+    "model_generation_wall_s": 0.0
+  }
+]

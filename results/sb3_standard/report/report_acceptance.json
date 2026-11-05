@@ -1,0 +1,37 @@
+{
+  "command": "python scripts/report_sb3_rl.py --input outputs/rl_sb3/standard",
+  "exit_code": 0,
+  "completeness": {
+    "expected_jobs": 21,
+    "completed_jobs": 21,
+    "expected_episodes": 1680,
+    "actual_episodes": 1680,
+    "unique_episodes": 1680,
+    "missing_episode_count": 0,
+    "unexpected_episode_count": 0,
+    "duplicate_episode_count": 0,
+    "missing_jobs": [],
+    "verified_complete": true,
+    "budget_mismatches": []
+  },
+  "reference": {
+    "expected_jobs": 3,
+    "completed_jobs": 3,
+    "expected_episodes": 240,
+    "actual_episodes": 240,
+    "unique_episodes": 240,
+    "verified_complete": true,
+    "budget_or_digest_mismatches": []
+  },
+  "main_test_episodes": 1680,
+  "reference_test_episodes": 240,
+  "reference_role": "fixed supplementary 3seed204800 pure PPO; different budget, never a replacement equal-budget comparison",
+  "report_sha256": "463c451596908bb2113c7e0aa194d165ec52c0d49511293e58f3a665c8ac8574",
+  "script_sha256": "80242bc59601c383f9b1c9cb700c7943fc07fd33d7183856871fbf39f8af3072",
+  "figure_sha256": {
+    "sample_efficiency.png": "6ba2329c7da4b55112d67d5f01c7d49c1c2905e8caf9983dee5e304733b3f631",
+    "reference_validation.png": "38c16309de5faba1739900707ddd650026175df5cf84ff52e42a01e6189f13d0"
+  },
+  "visual_QA": "main7-method budget axes and reference3-seed traces inspected; crowded reference ticks corrected to 51.2k/102.4k/153.6k/204.8k and re-rendered",
+  "interpretation": "PPO actual learning verified; limited OOD-vs-physics gain, main pure-PPO gain uncertain across seeds, extra-data reference narrows ID difference but not OOD; no equal-budget claim"
+}

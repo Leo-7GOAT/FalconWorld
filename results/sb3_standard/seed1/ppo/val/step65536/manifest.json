@@ -1,0 +1,55 @@
+{
+  "method": "ppo",
+  "training_seed": 1,
+  "cases": [
+    {
+      "seed": 7100000,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 7100001,
+      "family": "constant",
+      "condition": "id"
+    },
+    {
+      "seed": 7101000,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 7101001,
+      "family": "mild",
+      "condition": "id"
+    },
+    {
+      "seed": 7102000,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 7102001,
+      "family": "brake",
+      "condition": "id"
+    },
+    {
+      "seed": 7103000,
+      "family": "stopgo",
+      "condition": "id"
+    },
+    {
+      "seed": 7103001,
+      "family": "stopgo",
+      "condition": "id"
+    }
+  ],
+  "max_steps": 120,
+  "reward_version": "longitudinal-rl-reward-v2-bounded-survival",
+  "policy": "final checkpoint, greedy explore=False; no test selection",
+  "observation": "privileged simulator six [gap,ego,lead,actuator] frames plus previous applied u",
+  "timing": "cycle includes encoding, policy, safety and truth simulator step; no device IO",
+  "source_sha256": {
+    "rl_env.py": "bc8ba85ce8e901e8a8e29533befaf4032bca8c05ad4319dd7f5b7627abb6a58b",
+    "rl_evaluation.py": "62d7fc0d88be92247bdc1e9ea77c56aa7b6291017eacbbc03d10adbcc2dd5b29"
+  }
+}

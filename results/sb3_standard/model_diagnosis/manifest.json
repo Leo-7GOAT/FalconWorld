@@ -1,0 +1,58 @@
+{
+  "run": "<PROJECT_ROOT>\\outputs\\rl_sb3\\standard",
+  "common_data_sha256": "185db49b399d7a3b1ff9c7f74a7888de699301dd70ad8a7ba87bb35289274633",
+  "validation_npz_sha256": "760939c93d49aab614686283b495b9bfc9d8324c5a59a682c4f009de5905e1dd",
+  "accessed_labels": [
+    "common_data/val.npz only"
+  ],
+  "models": {
+    "seed0": {
+      "models": {
+        "physical_enriched": "7ce2f6a6327c58ef5639f2aa8ef160d26970af88398c5af7ed2d4e374a140afd",
+        "history": "346690a06ad80a1166e0bd648cc96ec25dd9c9e54c80321f2c16cce0a9c0d913",
+        "residual": "12952d310dcf33db3dcf5ec47ec462fa665e926d1f0f2ed7355333c9246040e0",
+        "learned_lead": "a0bdfb4b2ffea195c504a5e1bfbe0ee113dcc71b2c17eb2758e92fd52797a5c1"
+      },
+      "critic_probe_checkpoint": "outputs\\rl_sb3\\standard\\seed0\\wm_ppo\\final_policy.zip",
+      "critic_checkpoint_sha256": "65a9071f69436122c1324dc82d093a6dc359b32ecb8a55aaad0ee77569c26ca6"
+    },
+    "seed1": {
+      "models": {
+        "physical_enriched": "7ce2f6a6327c58ef5639f2aa8ef160d26970af88398c5af7ed2d4e374a140afd",
+        "history": "e33b3806c3a1a0ac57823ef218c699efd5e5936879cae47fbb068f4b351ce75d",
+        "residual": "b9ad29a82e5ae419f33b2f3ff90a50ba8fb6caf4bfed4c31198b073af9fc355a",
+        "learned_lead": "8937d16afbc37ed8d8e409503f4a58008b817aacc27604f52bb7c9444c38e6aa"
+      },
+      "critic_probe_checkpoint": "outputs\\rl_sb3\\standard\\seed1\\wm_ppo\\final_policy.zip",
+      "critic_checkpoint_sha256": "2c751c8792b562f75bf2f9ba57f3fef379bcdd3b54f7229c3fb777d9c9b2a953"
+    },
+    "seed2": {
+      "models": {
+        "physical_enriched": "7ce2f6a6327c58ef5639f2aa8ef160d26970af88398c5af7ed2d4e374a140afd",
+        "history": "553e89f8ab7d00589db1a3dc1fab17e658b9b3076a41a47200ea1d1c96209d56",
+        "residual": "d665ada9f723cbc4633b42707665a9db55ae982b95857d8f3c34677737250fef",
+        "learned_lead": "0587964fdc11c5a6feb2972ebc0296ffe04cbbb5bdcb61b2d50474deca53f3b5"
+      },
+      "critic_probe_checkpoint": "outputs\\rl_sb3\\standard\\seed2\\wm_ppo\\final_policy.zip",
+      "critic_checkpoint_sha256": "5575fcb340ec41b8e35ad062029456bc81a6de231f6c74b9bc48b5caa8823a92"
+    }
+  },
+  "validation_episode_count": 12,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "recursive_horizons_s": [
+    0.1,
+    0.5,
+    1.0,
+    3.0
+  ],
+  "statistical_unit": "episode means then family/seed; same validation episodes reused across model seeds",
+  "no_training": true,
+  "no_test_data": true,
+  "no_model_or_policy_selection": true,
+  "diagnostic_source_sha256": "8bfeb86b22a70e8f4569b70dac3d5e870bfd3a20d768392434fea395fc8195ce",
+  "recursive_helper_sha256": "d5696a4c0917ceac54576b33c884525fa61146b01346e660a59726b92e37146e"
+}

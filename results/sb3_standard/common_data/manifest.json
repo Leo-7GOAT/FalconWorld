@@ -1,0 +1,374 @@
+{
+  "version": "rl-ppo-common-v1",
+  "files": {
+    "train": "5c6846bf529c1397944536e0a043078736458dc010441cd42d7f70b012dc3392",
+    "val": "760939c93d49aab614686283b495b9bfc9d8324c5a59a682c4f009de5905e1dd"
+  },
+  "episodes": [
+    {
+      "split": "train",
+      "seed": 3000000,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000001,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000002,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000003,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000004,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000005,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000006,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000007,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000008,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000009,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000010,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3000011,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001000,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001001,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001002,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001003,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001004,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001005,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001006,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001007,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001008,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001009,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001010,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3001011,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002000,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002001,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002002,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002003,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002004,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002005,
+      "family": "brake",
+      "steps": 62
+    },
+    {
+      "split": "train",
+      "seed": 3002006,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002007,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3002008,
+      "family": "brake",
+      "steps": 53
+    },
+    {
+      "split": "train",
+      "seed": 3002009,
+      "family": "brake",
+      "steps": 86
+    },
+    {
+      "split": "train",
+      "seed": 3002010,
+      "family": "brake",
+      "steps": 62
+    },
+    {
+      "split": "train",
+      "seed": 3002011,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003000,
+      "family": "stopgo",
+      "steps": 71
+    },
+    {
+      "split": "train",
+      "seed": 3003001,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003002,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003003,
+      "family": "stopgo",
+      "steps": 67
+    },
+    {
+      "split": "train",
+      "seed": 3003004,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003005,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003006,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003007,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003008,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003009,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003010,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "train",
+      "seed": 3003011,
+      "family": "stopgo",
+      "steps": 64
+    },
+    {
+      "split": "val",
+      "seed": 3100000,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3100001,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3100002,
+      "family": "constant",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3101000,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3101001,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3101002,
+      "family": "mild",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3102000,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3102001,
+      "family": "brake",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3102002,
+      "family": "brake",
+      "steps": 70
+    },
+    {
+      "split": "val",
+      "seed": 3103000,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3103001,
+      "family": "stopgo",
+      "steps": 120
+    },
+    {
+      "split": "val",
+      "seed": 3103002,
+      "family": "stopgo",
+      "steps": 120
+    }
+  ],
+  "sha256": "185db49b399d7a3b1ff9c7f74a7888de699301dd70ad8a7ba87bb35289274633",
+  "training_transitions": 5385,
+  "validation_transitions": 1390,
+  "policy_access": "offline data NEVER used for PPO policy/critic gradient updates",
+  "worldmodel_access": "train fit; val selection; no test data exists in this dataset"
+}

@@ -1,0 +1,10 @@
+{
+  "ensemble.npz": "ced08feca20f7f3d4c58de1becf59d3be69ac71d806f1fb34beaa3ced20de880",
+  "history.npz": "553e89f8ab7d00589db1a3dc1fab17e658b9b3076a41a47200ea1d1c96209d56",
+  "learned_lead.npz": "0587964fdc11c5a6feb2972ebc0296ffe04cbbb5bdcb61b2d50474deca53f3b5",
+  "neural.npz": "b7ace60a092dca71a451d7d95034d03d456f554398ae06f09078387238ae69cf",
+  "physical_ca.npz": "d49dc83949241a146a59db2ac6fbf86dd33372208d7badf89b1adbc43ec2f816",
+  "physical_cv.npz": "235a2e8c01fd2959b105c2e5ec6c425379d6c37b02cd5fd409eeb5904424192e",
+  "physical_enriched.npz": "7ce2f6a6327c58ef5639f2aa8ef160d26970af88398c5af7ed2d4e374a140afd",
+  "residual.npz": "d665ada9f723cbc4633b42707665a9db55ae982b95857d8f3c34677737250fef"
+}

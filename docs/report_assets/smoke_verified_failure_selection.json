@@ -1,0 +1,10 @@
+{
+  "model": "physical_cv",
+  "family": "brake",
+  "condition": "id",
+  "scenario_seed": 902001,
+  "training_seed": 0,
+  "budget": "equal",
+  "collision": 1,
+  "min_gap_m": -0.27655347273924785
+}
