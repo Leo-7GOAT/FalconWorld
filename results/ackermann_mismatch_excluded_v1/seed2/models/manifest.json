@@ -1,0 +1,186 @@
+{
+  "training_episodes": 24,
+  "validation_episodes": 6,
+  "training_transitions": 2400,
+  "validation_transitions": 600,
+  "validation_steering_mae_rad": {
+    "rich": 0.009639204515978663,
+    "affine": 0.004811708588831246,
+    "residual": 0.00013907239838827133,
+    "mechanism": 6.730280319492375e-11
+  },
+  "residual_fit_seconds": 0.9615675999957602,
+  "residual_training_log": [
+    {
+      "epoch": 0,
+      "validation_mse": 1.132550835609436
+    },
+    {
+      "epoch": 5,
+      "validation_mse": 0.2699708640575409
+    },
+    {
+      "epoch": 10,
+      "validation_mse": 0.06892215460538864
+    },
+    {
+      "epoch": 15,
+      "validation_mse": 0.04172152280807495
+    },
+    {
+      "epoch": 20,
+      "validation_mse": 0.023692645132541656
+    },
+    {
+      "epoch": 25,
+      "validation_mse": 0.01929139532148838
+    },
+    {
+      "epoch": 30,
+      "validation_mse": 0.01665395125746727
+    },
+    {
+      "epoch": 35,
+      "validation_mse": 0.013337202370166779
+    },
+    {
+      "epoch": 40,
+      "validation_mse": 0.011495145037770271
+    },
+    {
+      "epoch": 45,
+      "validation_mse": 0.009919398464262486
+    },
+    {
+      "epoch": 50,
+      "validation_mse": 0.010525301098823547
+    },
+    {
+      "epoch": 55,
+      "validation_mse": 0.008602441288530827
+    },
+    {
+      "epoch": 60,
+      "validation_mse": 0.009636030532419682
+    },
+    {
+      "epoch": 65,
+      "validation_mse": 0.007951357401907444
+    },
+    {
+      "epoch": 70,
+      "validation_mse": 0.007583703845739365
+    },
+    {
+      "epoch": 75,
+      "validation_mse": 0.007918788120150566
+    },
+    {
+      "epoch": 80,
+      "validation_mse": 0.007157532498240471
+    },
+    {
+      "epoch": 85,
+      "validation_mse": 0.006504267454147339
+    },
+    {
+      "epoch": 90,
+      "validation_mse": 0.006790897808969021
+    },
+    {
+      "epoch": 95,
+      "validation_mse": 0.0063634333200752735
+    },
+    {
+      "epoch": 100,
+      "validation_mse": 0.006943174172192812
+    },
+    {
+      "epoch": 105,
+      "validation_mse": 0.006129491608589888
+    },
+    {
+      "epoch": 110,
+      "validation_mse": 0.007738114800304174
+    },
+    {
+      "epoch": 115,
+      "validation_mse": 0.006178342271596193
+    },
+    {
+      "epoch": 120,
+      "validation_mse": 0.005645225755870342
+    },
+    {
+      "epoch": 125,
+      "validation_mse": 0.006533735431730747
+    },
+    {
+      "epoch": 130,
+      "validation_mse": 0.005932655651122332
+    },
+    {
+      "epoch": 135,
+      "validation_mse": 0.006645658519119024
+    },
+    {
+      "epoch": 140,
+      "validation_mse": 0.005807681940495968
+    },
+    {
+      "epoch": 145,
+      "validation_mse": 0.006741026882082224
+    },
+    {
+      "epoch": 150,
+      "validation_mse": 0.005689259152859449
+    },
+    {
+      "epoch": 155,
+      "validation_mse": 0.0058471267111599445
+    },
+    {
+      "epoch": 160,
+      "validation_mse": 0.0055976565927267075
+    },
+    {
+      "epoch": 165,
+      "validation_mse": 0.005628542508929968
+    },
+    {
+      "epoch": 170,
+      "validation_mse": 0.005403273273259401
+    },
+    {
+      "epoch": 175,
+      "validation_mse": 0.005244077183306217
+    },
+    {
+      "epoch": 180,
+      "validation_mse": 0.007495054509490728
+    },
+    {
+      "epoch": 185,
+      "validation_mse": 0.005620036739856005
+    },
+    {
+      "epoch": 190,
+      "validation_mse": 0.005735678132623434
+    },
+    {
+      "epoch": 195,
+      "validation_mse": 0.005197926890105009
+    },
+    {
+      "epoch": 199,
+      "validation_mse": 0.005443227477371693
+    }
+  ],
+  "model_sha256": {
+    "affine.npz": "85c9d6c087cb07cf1eec5b7b8d61d8eecc3df63a5f4d2a3820ddad90a7cee316",
+    "data.npz": "dbfd508746648eedededd53a3ccf1dac4f73bdbb589fb78ca7649b7e817b99cb",
+    "mechanism.npz": "c05bd287ed660c0a639cdf3bd7c792986cabc5dc58c0122b11ad20e503596b90",
+    "residual.npz": "b45a632204d820da4c3d797aab3213b769421bc565334173718f609ad4bc76e9",
+    "rich.npz": "20a4c732906fad7c214d8f26104b46a114e84b0fcff18d8cf8c355e9606bcba6"
+  }
+}

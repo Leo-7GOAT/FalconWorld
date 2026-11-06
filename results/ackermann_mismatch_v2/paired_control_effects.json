@@ -1,0 +1,254 @@
+[
+  {
+    "control": "rich",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "return_raw",
+    "difference": 1.5949108737047386,
+    "low": -0.15800943345089127,
+    "high": 3.1838601611733326,
+    "per_seed": [
+      -0.29404111734204436,
+      2.153172061621606,
+      2.925601676834654
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "lateral_rmse_m",
+    "difference": 0.028462582230664658,
+    "low": -0.03134906800792544,
+    "high": 0.06483934807370711,
+    "per_seed": [
+      0.056565210878871154,
+      -0.03330323729366654,
+      0.062125773106789364
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "return_raw",
+    "difference": 0.0009550855521780477,
+    "low": -0.4618217067842651,
+    "high": 0.41465201206159674,
+    "per_seed": [
+      0.29128241691618584,
+      -0.38209395379450795,
+      0.09367679353485628
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "lateral_rmse_m",
+    "difference": 0.041015635951380275,
+    "low": -0.010488010758274553,
+    "high": 0.08398862817965187,
+    "per_seed": [
+      0.05428022673629872,
+      0.0834033335592684,
+      -0.01463665244142628
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "return_raw",
+    "difference": 3.338898716883162,
+    "low": 0.5815967374427029,
+    "high": 6.179909803006126,
+    "per_seed": [
+      6.36006247639359,
+      0.5961591293123704,
+      3.0604745449435256
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "lateral_rmse_m",
+    "difference": -0.016243723826510223,
+    "low": -0.0895013949535325,
+    "high": 0.05591781428693055,
+    "per_seed": [
+      -0.08911776787578161,
+      -0.016190417592886527,
+      0.05657701398913748
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "return_raw",
+    "difference": 0.015471291802741642,
+    "low": -1.7074285224550976,
+    "high": 1.7679309066362876,
+    "per_seed": [
+      2.1400387845026074,
+      -0.36407218164468913,
+      -1.7295527274496934
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "lateral_rmse_m",
+    "difference": -0.0047224136729306625,
+    "low": -0.08167429657298032,
+    "high": 0.055197466717486925,
+    "per_seed": [
+      -0.08597338023741638,
+      0.014919618122870076,
+      0.05688652109575432
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "return_raw",
+    "difference": 3.328977635634998,
+    "low": -2.699168046631771,
+    "high": 7.422928385857123,
+    "per_seed": [
+      -3.242433604403473,
+      6.724160069106861,
+      6.505206442201606
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "completed",
+    "difference": 0.016666666666666666,
+    "low": 0.0,
+    "high": 0.06666666666666667,
+    "per_seed": [
+      0.05,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "id",
+    "horizon_steps": null,
+    "metric": "lateral_rmse_m",
+    "difference": 0.057959518703952516,
+    "low": 0.026112927139622214,
+    "high": 0.08378066676633518,
+    "per_seed": [
+      0.06816985507657143,
+      0.022828274628284226,
+      0.08288042640700186
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "return_raw",
+    "difference": 0.6228281851927202,
+    "low": -0.9538819820771576,
+    "high": 1.8384770733666669,
+    "per_seed": [
+      1.4186908650527883,
+      1.4487482641397882,
+      -0.9989545736144159
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": null,
+    "metric": "lateral_rmse_m",
+    "difference": 0.06497187152374954,
+    "low": 0.040108441470393996,
+    "high": 0.08740096867372027,
+    "per_seed": [
+      0.05895704355855956,
+      0.04705714405562146,
+      0.08890142695706765
+    ]
+  }
+]

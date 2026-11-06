@@ -1,0 +1,258 @@
+[
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.00926779588247355,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.004951525150006057,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.00011140852468323008,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 2.8836570718521884e-11,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.02506984377680628,
+    "position_error_m": 0.0024718286903459997
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.010325195700958138,
+    "position_error_m": 0.001476544904065387
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.00024598482627939016,
+    "position_error_m": 3.881050226583986e-05
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 6.439404257576354e-11,
+    "position_error_m": 1.0813439174080077e-11
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.030057740372257273,
+    "position_error_m": 0.022322707851987107
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.01119362162650669,
+    "position_error_m": 0.011208263961576757
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.00026757877796158375,
+    "position_error_m": 0.0003418997969372365
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 7.361717534760485e-11,
+    "position_error_m": 8.04784531715418e-11
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.031194760867401212,
+    "position_error_m": 0.3481210817659097
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.009895876840310177,
+    "position_error_m": 0.12899124293229902
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.00027773938617610817,
+    "position_error_m": 0.004078778400456089
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 5.8104781711396406e-11,
+    "position_error_m": 9.034890264472083e-10
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.010468959805329029,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.009053173453679347,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.0071989521150714044,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.007230794280827063,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.02889932571486872,
+    "position_error_m": 0.006191931348345947
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.02268401167823393,
+    "position_error_m": 0.007031124916259067
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.018479250868800427,
+    "position_error_m": 0.007064225681741979
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.01846521020728987,
+    "position_error_m": 0.007060210188464563
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.03420840932907254,
+    "position_error_m": 0.041955837876481494
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.023970655395797832,
+    "position_error_m": 0.045166379959150724
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.02051633519856959,
+    "position_error_m": 0.04383220047597777
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.020508848859144106,
+    "position_error_m": 0.04381312718446469
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.03689102996288441,
+    "position_error_m": 0.5495541864777151
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.02239960342896439,
+    "position_error_m": 0.37496017935283477
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.02001783771357144,
+    "position_error_m": 0.33367758407451087
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.020090852815395095,
+    "position_error_m": 0.3341619129939757
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "method": "residual",
+  "training_seed": 1,
+  "online_steps": 2048,
+  "warm_steps": 256,
+  "policy_optimizer_steps": 320,
+  "aux_updates": 80,
+  "imagined_steps": 282624,
+  "offline_interactions": 3000,
+  "warm_seconds": 10.624061400012579,
+  "training_seconds": 4.867281100014225,
+  "checkpoint_sha256": "8081b34e5a8efb3fbd65c53062995d26fcc18fd4da0951825d6a2dae170f8862",
+  "test_sha256": "fba94fe3aa5f54c46706823ed0fea33782ff5e7a33fccf5bccf62db91bbfb73d",
+  "trajectory_sha256": "a0977ffd5d2c0df79ff5d7583a5392ad6d8d654482e347af108e0c32bbf13cb1",
+  "test_episodes": 40
+}

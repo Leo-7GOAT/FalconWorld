@@ -1,0 +1,17 @@
+{
+  "method": "ppo",
+  "training_seed": 0,
+  "online_steps": 16384,
+  "warm_steps": 0,
+  "policy_optimizer_steps": 2560,
+  "aux_updates": 0,
+  "imagined_steps": 0,
+  "offline_interactions": 0,
+  "warm_seconds": 0.0758849999983795,
+  "training_seconds": 13.138857399986591,
+  "checkpoint_sha256": "b1ca0e856a8946e33a783154df52c08a119894d7b88fab30c8619d0df4a8ddd9",
+  "test_sha256": "f8575bee0a92b02038adc0c4f15f79b7a1f3694cc5db83cddd3007e65d934872",
+  "trajectory_sha256": "a6c2a539ce240d3b4192547d725a4c9ba8e62a5b6a5f3f900bc76a71f6b6251b",
+  "completion_rate": 0.45,
+  "mean_return": 18.31813190361887
+}

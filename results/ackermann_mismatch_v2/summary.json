@@ -1,0 +1,102 @@
+[
+  {
+    "method": "ppo",
+    "distribution": "id",
+    "episodes": 60,
+    "completed": 23,
+    "return_raw": 26.622332923428715,
+    "lateral_rmse_m": 0.9437059255754922,
+    "speed_rmse_mps": 1.2319032781960917,
+    "steering_rate_rms_radps": 0.12516218187949663
+  },
+  {
+    "method": "ppo",
+    "distribution": "ood",
+    "episodes": 60,
+    "completed": 23,
+    "return_raw": 24.35845212531764,
+    "lateral_rmse_m": 0.9896544484304095,
+    "speed_rmse_mps": 1.1400486849301446,
+    "steering_rate_rms_radps": 0.14712202067596447
+  },
+  {
+    "method": "rich",
+    "distribution": "id",
+    "episodes": 60,
+    "completed": 60,
+    "return_raw": 157.65271121864427,
+    "lateral_rmse_m": 0.14964522791189033,
+    "speed_rmse_mps": 0.35510384614651797,
+    "steering_rate_rms_radps": 0.10558403830537154
+  },
+  {
+    "method": "rich",
+    "distribution": "ood",
+    "episodes": 60,
+    "completed": 60,
+    "return_raw": 122.710150732251,
+    "lateral_rmse_m": 0.2143422895748903,
+    "speed_rmse_mps": 0.680266011023522,
+    "steering_rate_rms_radps": 0.1660741374511064
+  },
+  {
+    "method": "affine",
+    "distribution": "id",
+    "episodes": 60,
+    "completed": 60,
+    "return_raw": 155.90872337546577,
+    "lateral_rmse_m": 0.1943515339690652,
+    "speed_rmse_mps": 0.22777548074403853,
+    "steering_rate_rms_radps": 0.10345100844213571
+  },
+  {
+    "method": "affine",
+    "distribution": "ood",
+    "episodes": 60,
+    "completed": 60,
+    "return_raw": 122.69563452600045,
+    "lateral_rmse_m": 0.26008033919920126,
+    "speed_rmse_mps": 0.48953449517569225,
+    "steering_rate_rms_radps": 0.16791820262570847
+  },
+  {
+    "method": "residual",
+    "distribution": "id",
+    "episodes": 60,
+    "completed": 60,
+    "return_raw": 159.24762209234896,
+    "lateral_rmse_m": 0.178107810142555,
+    "speed_rmse_mps": 0.26629571086368437,
+    "steering_rate_rms_radps": 0.10479064652882765
+  },
+  {
+    "method": "residual",
+    "distribution": "ood",
+    "episodes": 60,
+    "completed": 60,
+    "return_raw": 122.71110581780319,
+    "lateral_rmse_m": 0.2553579255262705,
+    "speed_rmse_mps": 0.5407818162666796,
+    "steering_rate_rms_radps": 0.1835425080025263
+  },
+  {
+    "method": "mechanism",
+    "distribution": "id",
+    "episodes": 60,
+    "completed": 59,
+    "return_raw": 155.91864445671393,
+    "lateral_rmse_m": 0.12014829143860249,
+    "speed_rmse_mps": 0.4311147557585452,
+    "steering_rate_rms_radps": 0.08885391485967138
+  },
+  {
+    "method": "mechanism",
+    "distribution": "ood",
+    "episodes": 60,
+    "completed": 60,
+    "return_raw": 122.08827763261048,
+    "lateral_rmse_m": 0.190386054002521,
+    "speed_rmse_mps": 0.6964374138205087,
+    "steering_rate_rms_radps": 0.15007995062429805
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "method": "affine",
+  "training_seed": 1,
+  "online_steps": 2048,
+  "warm_steps": 256,
+  "policy_optimizer_steps": 320,
+  "aux_updates": 80,
+  "imagined_steps": 282624,
+  "offline_interactions": 3000,
+  "warm_seconds": 9.690107100002933,
+  "training_seconds": 4.594428299984429,
+  "checkpoint_sha256": "ae26d8a8d71104728e08f000cbef514e6191a058bfcbb7c5d9170120a4e6b015",
+  "test_sha256": "976379b5ce2ca77eb2ba8d2718f568317c24ef01f582e510741d4727cb99d76f",
+  "trajectory_sha256": "b1855ecf7eaa70ed34d74d66883bbfe3033caf3ee4a5f17b1f54a6803c29bd00",
+  "test_episodes": 40
+}

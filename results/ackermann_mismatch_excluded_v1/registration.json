@@ -1,0 +1,45 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "methods": [
+    "ppo",
+    "rich",
+    "affine",
+    "residual",
+    "mechanism"
+  ],
+  "online_steps": 16384,
+  "primary": "ID prediction steering MAE and ID closed-loop raw return with completion not lower; OOD secondary",
+  "control": "rich7 refit; affine gain/offset refit; residual on same affine; exact friction-structure physical refit",
+  "interpretation": "Synthetic mismatch, not measured R550. Residual cannot be assumed superior to matched-structure physical control.",
+  "frozen_hyperparameters": {
+    "aux_weight": 1,
+    "horizon": 16,
+    "warm_steps": 256,
+    "interval": 4,
+    "mlp_epochs": 200
+  },
+  "sources": {
+    "run_ackermann_mismatch.py": "4a30e753b2df3278a4b4fddfe1a6771a4bf00d8e13d0d474937f667e1ba25dd0",
+    "falconworld/ackermann_mismatch.py": "80ed61d4e4cedf891f02950c8c5fc3fa0cacf26cebde45c0f7d51a7de0c4f7ce",
+    "falconworld/ackermann_rl.py": "be05b014cdd1f353549fe487c317eeeebdc535b6b67808e35889e0f24d3e93b1",
+    "falconworld/ackermann_differentiable.py": "f688702e4f753144a3e2896b347af25b690851cce17d9ed898a41c670745f064",
+    "falconworld/ackermann_model_gradient.py": "439544ad491a0092a8beb2a74a5754a1fb4f264ef1134cba6414687cd8bcc70b",
+    "falconworld/ackermann.py": "43064e9bfed6ba7c05f33c4348b15635627dee392eff22227958c381c07e02c1",
+    "run_ackermann_improvement.py": "2dbb030db21200418eef012509add21a542e9b1c9726797b07595b0d5ad71641",
+    "run_ackermann_rl.py": "098e30ea15fcc093dfa09d44abf81e671ff873d3ee31f0d95420ee8d43b6edcb"
+  },
+  "namespaces": {
+    "train": 210000000,
+    "val": 220000000,
+    "test": 230000000,
+    "ood": 240000000
+  },
+  "versions": {
+    "torch": "2.15.0+cpu",
+    "numpy": "2.4.6"
+  }
+}

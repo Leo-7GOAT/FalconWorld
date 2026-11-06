@@ -15,7 +15,8 @@ def sha(path):
 
 def audit(root):
     registration=json.loads((root/'registration.json').read_text(encoding='utf8'))
-    gradient=registration.get('stage') in ('final','efficiency')
+    mismatch='frozen_hyperparameters' in registration
+    gradient=registration.get('stage') in ('final','efficiency') or mismatch
     spec=registration.get('spec',dict(seeds=registration.get('seeds'),steps=registration.get('online_steps'),pairs=10))
     errors=[];episodes=0;steps=0;identities=set();max_error=0.
     def require(condition, label):
@@ -29,29 +30,35 @@ def audit(root):
         require(sha(root/'source_snapshot'/name)==digest, 'source_snapshot:'+name)
     for seed in spec['seeds']:
         mf=root/f'seed{seed}/models';manifest=json.loads((mf/'manifest.json').read_text())
-        require(sha(mf/'data.npz')==manifest['dataset_sha256'],'offline_data_hash')
+        require(sha(mf/'data.npz')==manifest.get('dataset_sha256',manifest['model_sha256'].get('data.npz')),'offline_data_hash')
         for name,digest in manifest['model_sha256'].items():require(sha(mf/name)==digest,'model_hash')
-        train={e['seed'] for e in manifest['episodes'] if e['split']=='train'}
-        val={e['seed'] for e in manifest['episodes'] if e['split']=='validation'}
+        if mismatch:
+            with np.load(mf/'data.npz',allow_pickle=False) as data:
+                train=set(map(int,np.unique(data['train_episode'])));val=set(map(int,np.unique(data['val_episode'])))
+        else:
+            train={e['seed'] for e in manifest['episodes'] if e['split']=='train'}
+            val={e['seed'] for e in manifest['episodes'] if e['split']=='validation'}
         require(not train&val and len(train)==24 and len(val)==6,'offline_episode_split')
         for method in registration['methods']:
             folder=root/f'seed{seed}'/method;ledger=json.loads((folder/'complete.json').read_text())
             require(sha(folder/'final_policy.zip')==ledger['checkpoint_sha256'],'policy_hash')
-            require(sha(folder/'test/episodes.jsonl')==ledger['evaluation_sha256' if gradient else 'test_sha256'],'test_hash')
+            require(sha(folder/'test/episodes.jsonl')==ledger['evaluation_sha256' if gradient and not mismatch else 'test_sha256'],'test_hash')
             require(sha(folder/'test/trajectories.npz')==ledger['trajectory_sha256'],'trajectory_hash')
             expected_online=20480 if method=='ppo_total_budget' else spec['steps']
             expected_steps=expected_online//2048*320
             require(ledger['online_steps']==expected_online,'online_budget')
             if gradient:
-                cfg=registration['selection']['config'];warm=0 if method in ('ppo','ppo_compute','ppo_total_budget') else cfg['warm_steps']
+                cfg=registration['frozen_hyperparameters'] if mismatch else registration['selection']['config']
+                warm=0 if method in ('ppo','ppo_compute','ppo_total_budget') else cfg['warm_steps']
                 extra=cfg['warm_steps'] if method=='ppo_compute' else 0
                 require(ledger['warm_steps']==warm and ledger['policy_optimizer_steps']==expected_steps+extra,'gradient_budget')
-                require(ledger['total_optimizer_steps']==expected_steps+extra+warm,'total_gradient_budget')
+                if not mismatch:require(ledger['total_optimizer_steps']==expected_steps+extra+warm,'total_gradient_budget')
                 expected_aux=0 if method in ('ppo','ppo_compute','ppo_total_budget') else expected_steps//cfg['interval']
                 require(ledger['aux_updates']==expected_aux,'aux_update_count')
-                expected_imagined=(warm*64+expected_aux*16)*cfg['horizon'] if method in ('wm_gradient','physics_gradient') else 0
+                uses_dynamics=method in ('wm_gradient','physics_gradient') or (mismatch and method!='ppo')
+                expected_imagined=(warm*64+expected_aux*16)*cfg['horizon'] if uses_dynamics else 0
                 require(ledger['imagined_steps']==expected_imagined,'imagined_step_count')
-                expected_adam={expected_steps+extra} if not warm else {expected_steps,expected_steps+warm}
+                expected_adam={expected_steps+extra} if not warm else {n for n in (expected_steps,expected_steps+warm) if n>0}
             else:
                 require(ledger['online_steps']==spec['steps'] and ledger['optimizer_steps']==expected_steps,'ledger_budget')
                 require(ledger['synthetic_replaced']==(0 if method=='ppo' else spec['steps']//2),'model_replacement_count')
@@ -84,6 +91,13 @@ def audit(root):
                         (s[:,2]+.1*v*np.tan(s[:,5])/(1+.015*condition*v*v)+np.pi)%(2*np.pi)-np.pi,
                         np.maximum(0,v+.1*s[:,4]),np.clip(s[:,4]+.1*(u[:,0]-s[:,4])/ta,-3,2),
                         np.clip(s[:,5]+.1*(u[:,1]-s[:,5])/td,-.5,.5)])
+                    if mismatch:
+                        if registration.get('plant_version')!='v2-monotone-smooth-deadzone':
+                            raise ValueError('Excluded nonmonotone prototype is not an accepted mismatch experiment')
+                        effort=1.08*u[:,1]+.025-s[:,5]
+                        width=.032*(1+.30*(v/5)**2)
+                        force=effort-width*np.tanh(effort/width)
+                        expected[:,5]=np.clip(s[:,5]+.1/td*force,-.5,.5)
                     require(np.allclose(n,expected,atol=1e-10),'independent_dynamics')
                     rng=np.random.default_rng(eid);phase=rng.uniform(-.8,.8)
                     vref=rng.uniform(4,5) if condition!=1 else rng.uniform(2,4)
@@ -116,7 +130,7 @@ def audit(root):
                     require(bool(success[-1])==record['completed'] and bool(fail[-1])==record['road_departure'],'completion_label')
     expected=len(spec['seeds'])*len(registration['methods'])*4*spec['pairs']
     require(episodes==expected,'global_case_count')
-    namespace=99_000_000 if registration.get('stage')=='efficiency' else 95_000_000 if gradient else 90_000_000
+    namespace=registration.get('evaluation_namespace',350_000_000) if mismatch else 99_000_000 if registration.get('stage')=='efficiency' else 95_000_000 if gradient else 90_000_000
     expected_keys={(seed,method,namespace+seed*100_000+ci*10_000+fi*1000+pair)
         for seed in spec['seeds'] for method in registration['methods'] for ci in (0,1) for fi in (0,1) for pair in range(spec['pairs'])}
     require(identities==expected_keys,'heldout_case_identities')

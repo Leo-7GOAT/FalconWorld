@@ -1,0 +1,1 @@
+Excluded prototype: the first friction approximation was nonmonotone near zero. Its results are archived only and are not evidence for a physically plausible mismatch. V2 uses a monotone smooth dead zone and entirely new seeds.

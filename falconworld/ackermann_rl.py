@@ -138,7 +138,7 @@ class AckermannTrackingEnv(gym.Env):
             raise RuntimeError('reset required after termination/truncation')
         old, previous = self.state.copy(), self.previous.copy()
         u = applied_tracking(action, previous)
-        n = step_ackermann(old, u, CFG, condition=self.condition)
+        n = self.advance(old, u)
         reward, terminal, metrics = tracking_transition(old, n, previous, u, self.route)
         self.steps += 1
         self.transition_count += 1
@@ -149,6 +149,9 @@ class AckermannTrackingEnv(gym.Env):
         info.update(state=old, next_state=n.copy(), previous=previous, applied=u.copy(),
                     raw_reward=float(reward), steps=self.steps, **self.case)
         return encode_tracking(n, u, self.route), float(reward)*LEARNING_REWARD_SCALE, bool(terminal), truncated, info
+
+    def advance(self, state, action):
+        return step_ackermann(state, action, CFG, condition=self.condition)
 
 
 class AckermannWorldModelPPO(PPO):

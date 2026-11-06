@@ -1,0 +1,17 @@
+{
+  "method": "mechanism",
+  "training_seed": 2,
+  "online_steps": 16384,
+  "warm_steps": 256,
+  "policy_optimizer_steps": 2560,
+  "aux_updates": 640,
+  "imagined_steps": 425984,
+  "offline_interactions": 3000,
+  "warm_seconds": 10.255345000012312,
+  "training_seconds": 32.939652999979444,
+  "checkpoint_sha256": "f22d06309adc9502cfb6b43227b2e3501f7357578efe5d1ccece3946f7e1e6aa",
+  "test_sha256": "2a4c22d9c8155d9c4431a57b26c22e08aa76a584dd49646cb1671e711f8a7e1f",
+  "trajectory_sha256": "3cb510167992520636269a106c5bf34fd725d07f34360abbfd8eb22746f5545f",
+  "completion_rate": 1.0,
+  "mean_return": 141.89581992234744
+}

@@ -1,0 +1,186 @@
+{
+  "training_episodes": 24,
+  "validation_episodes": 6,
+  "training_transitions": 2400,
+  "validation_transitions": 600,
+  "validation_steering_mae_rad": {
+    "rich": 0.007025792473689241,
+    "affine": 0.004083528148102611,
+    "residual": 8.772372430967337e-05,
+    "mechanism": 4.334638450585298e-07
+  },
+  "residual_fit_seconds": 2.335223000001861,
+  "residual_training_log": [
+    {
+      "epoch": 0,
+      "validation_mse": 0.8903120160102844
+    },
+    {
+      "epoch": 5,
+      "validation_mse": 0.17200186848640442
+    },
+    {
+      "epoch": 10,
+      "validation_mse": 0.07470695674419403
+    },
+    {
+      "epoch": 15,
+      "validation_mse": 0.021433839574456215
+    },
+    {
+      "epoch": 20,
+      "validation_mse": 0.008957268670201302
+    },
+    {
+      "epoch": 25,
+      "validation_mse": 0.00436477642506361
+    },
+    {
+      "epoch": 30,
+      "validation_mse": 0.0028985317330807447
+    },
+    {
+      "epoch": 35,
+      "validation_mse": 0.002453736262395978
+    },
+    {
+      "epoch": 40,
+      "validation_mse": 0.0020295814611017704
+    },
+    {
+      "epoch": 45,
+      "validation_mse": 0.0016235490329563618
+    },
+    {
+      "epoch": 50,
+      "validation_mse": 0.001583260833285749
+    },
+    {
+      "epoch": 55,
+      "validation_mse": 0.0015456258552148938
+    },
+    {
+      "epoch": 60,
+      "validation_mse": 0.0014228051295503974
+    },
+    {
+      "epoch": 65,
+      "validation_mse": 0.001661407295614481
+    },
+    {
+      "epoch": 70,
+      "validation_mse": 0.00149595330003649
+    },
+    {
+      "epoch": 75,
+      "validation_mse": 0.0016317842528223991
+    },
+    {
+      "epoch": 80,
+      "validation_mse": 0.001478414749726653
+    },
+    {
+      "epoch": 85,
+      "validation_mse": 0.0015823489520698786
+    },
+    {
+      "epoch": 90,
+      "validation_mse": 0.0013506131945177913
+    },
+    {
+      "epoch": 95,
+      "validation_mse": 0.0013461854541674256
+    },
+    {
+      "epoch": 100,
+      "validation_mse": 0.001512216287665069
+    },
+    {
+      "epoch": 105,
+      "validation_mse": 0.0016148299910128117
+    },
+    {
+      "epoch": 110,
+      "validation_mse": 0.001344081829302013
+    },
+    {
+      "epoch": 115,
+      "validation_mse": 0.0012498917058110237
+    },
+    {
+      "epoch": 120,
+      "validation_mse": 0.0012738339137285948
+    },
+    {
+      "epoch": 125,
+      "validation_mse": 0.001254550414159894
+    },
+    {
+      "epoch": 130,
+      "validation_mse": 0.001541978563182056
+    },
+    {
+      "epoch": 135,
+      "validation_mse": 0.0013756996486335993
+    },
+    {
+      "epoch": 140,
+      "validation_mse": 0.0011150870705023408
+    },
+    {
+      "epoch": 145,
+      "validation_mse": 0.0014914178755134344
+    },
+    {
+      "epoch": 150,
+      "validation_mse": 0.0011282034683972597
+    },
+    {
+      "epoch": 155,
+      "validation_mse": 0.001282570417970419
+    },
+    {
+      "epoch": 160,
+      "validation_mse": 0.0013291002251207829
+    },
+    {
+      "epoch": 165,
+      "validation_mse": 0.0009953356347978115
+    },
+    {
+      "epoch": 170,
+      "validation_mse": 0.0014527348103001714
+    },
+    {
+      "epoch": 175,
+      "validation_mse": 0.0013162894174456596
+    },
+    {
+      "epoch": 180,
+      "validation_mse": 0.001182600506581366
+    },
+    {
+      "epoch": 185,
+      "validation_mse": 0.001141026266850531
+    },
+    {
+      "epoch": 190,
+      "validation_mse": 0.0010279355337843299
+    },
+    {
+      "epoch": 195,
+      "validation_mse": 0.0014031031168997288
+    },
+    {
+      "epoch": 199,
+      "validation_mse": 0.0012483823811635375
+    }
+  ],
+  "model_sha256": {
+    "affine.npz": "7728560f722e4d85f817fef331d4771f86baa679d3002cff61961cf815c5bf17",
+    "data.npz": "869277daa7b0fba6eeb22289eb6ebc4cb423f2c148b9697cf77e533d6d3705fc",
+    "mechanism.npz": "fc6a4b71c02a0d2de64b108b54f54adf67948c680a206039cf67e4a2e6fe5915",
+    "residual.npz": "ccc293924b1ebc79ca57f925929cf87e43d0e7d4f5eeb651ffff9849a710ef0f",
+    "rich.npz": "6c9ed903527bda03c171ca170627d2344dce736bcef28ec9ffd5d7a1eb49dbb3"
+  }
+}

@@ -1,0 +1,674 @@
+[
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 1,
+    "metric": "steering_mae_rad",
+    "difference": -0.006656146696931352,
+    "low": -0.007474492223923306,
+    "high": -0.005906403626678327,
+    "per_seed": [
+      -0.006613353263697007,
+      -0.0069097416742830015,
+      -0.006445345152814051
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 1,
+    "metric": "position_error_m",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 5,
+    "metric": "steering_mae_rad",
+    "difference": -0.019070452986447505,
+    "low": -0.02120486113637005,
+    "high": -0.01711920716825901,
+    "per_seed": [
+      -0.020020364863978284,
+      -0.018971269253908313,
+      -0.01821972484145593
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 5,
+    "metric": "position_error_m",
+    "difference": -0.00341234165205813,
+    "low": -0.004613246620045337,
+    "high": -0.0021752162066975707,
+    "per_seed": [
+      -0.004475385750916431,
+      -0.0033298150842184793,
+      -0.0024318241210394788
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 10,
+    "metric": "steering_mae_rad",
+    "difference": -0.0237621325083878,
+    "low": -0.026548597032187128,
+    "high": -0.021449636359856653,
+    "per_seed": [
+      -0.025645982581288834,
+      -0.02321710869007376,
+      -0.022423306253800797
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 10,
+    "metric": "position_error_m",
+    "difference": -0.031329840179658265,
+    "low": -0.04377314515561656,
+    "high": -0.01961572476019881,
+    "per_seed": [
+      -0.04238856106619009,
+      -0.03003636474864388,
+      -0.021564594724140823
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 30,
+    "metric": "steering_mae_rad",
+    "difference": -0.025479379687404987,
+    "low": -0.029236638563735373,
+    "high": -0.02183042546600216,
+    "per_seed": [
+      -0.02873126636876162,
+      -0.02502810283733383,
+      -0.022678769856119496
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "test",
+    "horizon_steps": 30,
+    "metric": "position_error_m",
+    "difference": -0.531892638933698,
+    "low": -0.7480800408956141,
+    "high": -0.32730525480334,
+    "per_seed": [
+      -0.643510243282071,
+      -0.5773397591983096,
+      -0.3748279143207133
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 1,
+    "metric": "steering_mae_rad",
+    "difference": -0.0013281716091993858,
+    "low": -0.0018817712613070116,
+    "high": -0.0007975134301407872,
+    "per_seed": [
+      -0.0011437420587118627,
+      -0.0017719581461180189,
+      -0.0010688146227682761
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 1,
+    "metric": "position_error_m",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 5,
+    "metric": "steering_mae_rad",
+    "difference": -0.004435456118418185,
+    "low": -0.005802251879508372,
+    "high": -0.0032275957773469457,
+    "per_seed": [
+      -0.004309282308359659,
+      -0.005230829827125878,
+      -0.0037662562197690206
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 5,
+    "metric": "position_error_m",
+    "difference": 0.0007797299825476905,
+    "low": 2.9189166785403933e-05,
+    "high": 0.0018546174628717843,
+    "per_seed": [
+      0.0013082676579115793,
+      0.0008603965655093236,
+      0.00017052572422216833
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 10,
+    "metric": "steering_mae_rad",
+    "difference": -0.00526317160685987,
+    "low": -0.007080612389659402,
+    "high": -0.003382358986342482,
+    "per_seed": [
+      -0.005275680906006871,
+      -0.005374701264449255,
+      -0.005139132650123482
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 10,
+    "metric": "position_error_m",
+    "difference": 0.0016456748104424004,
+    "low": -0.0018186342033979473,
+    "high": 0.0049752149678708646,
+    "per_seed": [
+      0.002474492664754627,
+      0.002396514800442123,
+      6.601696613045133e-05
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 30,
+    "metric": "steering_mae_rad",
+    "difference": -0.008232807702753472,
+    "low": -0.012954629629898613,
+    "high": -0.002957179947762026,
+    "per_seed": [
+      -0.0039919240272196415,
+      -0.008007839394167481,
+      -0.012698659686873304
+    ]
+  },
+  {
+    "control": "rich",
+    "split": "ood",
+    "horizon_steps": 30,
+    "metric": "position_error_m",
+    "difference": -0.02520916722168921,
+    "low": -0.14269050741211578,
+    "high": 0.10249499958300727,
+    "per_seed": [
+      -0.0005439133919695818,
+      -0.03105151928886557,
+      -0.044032068984232474
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 1,
+    "metric": "steering_mae_rad",
+    "difference": -0.003869744006018594,
+    "low": -0.004179641109205914,
+    "high": -0.0035812705660535353,
+    "per_seed": [
+      -0.0037895698603615602,
+      -0.004039673380816405,
+      -0.0037799887768778205
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 1,
+    "metric": "position_error_m",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 5,
+    "metric": "steering_mae_rad",
+    "difference": -0.008429057610736994,
+    "low": -0.00901980360918142,
+    "high": -0.007902870316135471,
+    "per_seed": [
+      -0.008708493837774205,
+      -0.008531365067458043,
+      -0.008047313926978734
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 5,
+    "metric": "position_error_m",
+    "difference": -0.0020701517264289245,
+    "low": -0.0028504327328365917,
+    "high": -0.0013883932417621812,
+    "per_seed": [
+      -0.0025290544428715534,
+      -0.0020676088155640844,
+      -0.0016137919208511354
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 10,
+    "metric": "steering_mae_rad",
+    "difference": -0.00874716781415706,
+    "low": -0.009679516907838947,
+    "high": -0.007827385191939932,
+    "per_seed": [
+      -0.009566587149621771,
+      -0.008201372458976019,
+      -0.008473543833873392
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 10,
+    "metric": "position_error_m",
+    "difference": -0.015718975065301486,
+    "low": -0.021616135312761364,
+    "high": -0.010400695637348974,
+    "per_seed": [
+      -0.01799752990467151,
+      -0.016312143937882977,
+      -0.01284725135334997
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 30,
+    "metric": "steering_mae_rad",
+    "difference": -0.007767461807886176,
+    "low": -0.009212679938960237,
+    "high": -0.00627261642816642,
+    "per_seed": [
+      -0.00791985106192572,
+      -0.007115404119732316,
+      -0.008267130242000497
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "test",
+    "horizon_steps": 30,
+    "metric": "position_error_m",
+    "difference": -0.16818606894155377,
+    "low": -0.2405546270609013,
+    "high": -0.10717559043366783,
+    "per_seed": [
+      -0.1845278442746768,
+      -0.17353235894514674,
+      -0.14649800360483772
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 1,
+    "metric": "steering_mae_rad",
+    "difference": -0.0016473356103372573,
+    "low": -0.002157849798139956,
+    "high": -0.0009703762263890981,
+    "per_seed": [
+      -0.0019047761062076147,
+      -0.0020505265610812774,
+      -0.0009867041637228809
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 1,
+    "metric": "position_error_m",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 5,
+    "metric": "steering_mae_rad",
+    "difference": -0.003932939718895934,
+    "low": -0.005326492532254838,
+    "high": -0.0021520570561489715,
+    "per_seed": [
+      -0.0046328465777378675,
+      -0.004970462850982174,
+      -0.00219550972796776
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 5,
+    "metric": "position_error_m",
+    "difference": 0.0001779592016001685,
+    "low": -5.741402388974468e-05,
+    "high": 0.0004582298563807661,
+    "per_seed": [
+      0.00019475652062824042,
+      6.091222230955396e-05,
+      0.00027820886186271114
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 10,
+    "metric": "steering_mae_rad",
+    "difference": -0.0032789686430817868,
+    "low": -0.005142040443429453,
+    "high": -0.0011620138031282483,
+    "per_seed": [
+      -0.00473509895396673,
+      -0.003688705084564682,
+      -0.001413101890713947
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 10,
+    "metric": "position_error_m",
+    "difference": -8.379607192934262e-05,
+    "low": -0.0019436147366145387,
+    "high": 0.0017707568391102835,
+    "per_seed": [
+      -0.0009610463952013928,
+      -0.000898336851172548,
+      0.0016079950305859128
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 30,
+    "metric": "steering_mae_rad",
+    "difference": -0.0008738898216538983,
+    "low": -0.004550288384079167,
+    "high": 0.0028327144177698765,
+    "per_seed": [
+      -0.00283267912051463,
+      -0.002400470889197473,
+      0.0026114805447504065
+    ]
+  },
+  {
+    "control": "affine",
+    "split": "ood",
+    "horizon_steps": 30,
+    "metric": "position_error_m",
+    "difference": 0.010953764395358527,
+    "low": -0.03477948458573124,
+    "high": 0.06635974977591237,
+    "per_seed": [
+      0.050591070878775214,
+      -0.0277256833559563,
+      0.009995905663256652
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 1,
+    "metric": "steering_mae_rad",
+    "difference": 5.273929697193156e-05,
+    "low": 4.436820605052278e-05,
+    "high": 6.252532438926807e-05,
+    "per_seed": [
+      6.032922548099454e-05,
+      4.478427260093861e-05,
+      5.310439283386156e-05
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 1,
+    "metric": "position_error_m",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 5,
+    "metric": "steering_mae_rad",
+    "difference": 0.00011876378935280944,
+    "low": 9.259803932448532e-05,
+    "high": 0.00016086443363528128,
+    "per_seed": [
+      0.00015403836548897776,
+      9.406156769858413e-05,
+      0.00010819143487086638
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 5,
+    "metric": "position_error_m",
+    "difference": 4.0180982174306984e-05,
+    "low": 1.8995968859206222e-05,
+    "high": 7.173025933282912e-05,
+    "per_seed": [
+      6.760009676770673e-05,
+      2.9958642103643307e-05,
+      2.2984207651570925e-05
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 10,
+    "metric": "steering_mae_rad",
+    "difference": 0.00013821458396976965,
+    "low": 0.00010297576938735677,
+    "high": 0.00018934822989508473,
+    "per_seed": [
+      0.00018396963609907017,
+      0.00010548603481469793,
+      0.00012518808099554096
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 10,
+    "metric": "position_error_m",
+    "difference": 0.00031794379038807536,
+    "low": 0.00012328641814803555,
+    "high": 0.0006338049757575639,
+    "per_seed": [
+      0.00059208817213082,
+      0.00019969915308511854,
+      0.00016204404594828776
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 30,
+    "metric": "steering_mae_rad",
+    "difference": 0.00012540814174475453,
+    "low": 9.02652957497229e-05,
+    "high": 0.00015710323270291373,
+    "per_seed": [
+      0.00012804580355085354,
+      0.00010871599840597972,
+      0.0001394626232774303
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "test",
+    "horizon_steps": 30,
+    "metric": "position_error_m",
+    "difference": 0.003871550365536326,
+    "low": 0.0014727682727748923,
+    "high": 0.007757055384859229,
+    "per_seed": [
+      0.00737065864509637,
+      0.0020032058499422477,
+      0.002240786601570361
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 1,
+    "metric": "steering_mae_rad",
+    "difference": -3.614963001177656e-05,
+    "low": -6.18315670708701e-05,
+    "high": -1.6262728548092556e-05,
+    "per_seed": [
+      -3.8175053198103054e-05,
+      -1.8799948215321786e-05,
+      -5.147388862190485e-05
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 1,
+    "metric": "position_error_m",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 5,
+    "metric": "steering_mae_rad",
+    "difference": -1.6811441767822175e-05,
+    "low": -5.066196275615676e-05,
+    "high": 1.2997622411408057e-05,
+    "per_seed": [
+      -4.696807416400689e-05,
+      -8.259945321467155e-06,
+      4.7936941820075215e-06
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 5,
+    "metric": "position_error_m",
+    "difference": -5.939781867760136e-06,
+    "low": -1.5661766496493864e-05,
+    "high": -4.992115184129239e-07,
+    "per_seed": [
+      -1.5148596460602075e-05,
+      -1.259207629639961e-06,
+      -1.411541513038372e-06
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 10,
+    "metric": "steering_mae_rad",
+    "difference": -1.3685360129666799e-05,
+    "low": -7.435696332361454e-05,
+    "high": 5.063519711512705e-05,
+    "per_seed": [
+      -5.6937076286350806e-05,
+      -4.0190982386851744e-05,
+      5.6071978284202154e-05
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 10,
+    "metric": "position_error_m",
+    "difference": -3.970092233063106e-05,
+    "low": -0.0001592524810514408,
+    "high": 6.988696773252511e-05,
+    "per_seed": [
+      -0.0001558257915981449,
+      -1.5957216575320476e-05,
+      5.2680241181572195e-05
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 30,
+    "metric": "steering_mae_rad",
+    "difference": -1.095896360502208e-05,
+    "low": -5.6978808734357324e-05,
+    "high": 2.909392317652645e-05,
+    "per_seed": [
+      -4.0737720300013625e-05,
+      2.1188145471934782e-05,
+      -1.3327315986987401e-05
+    ]
+  },
+  {
+    "control": "mechanism",
+    "split": "ood",
+    "horizon_steps": 30,
+    "metric": "position_error_m",
+    "difference": -0.00016372404935572534,
+    "low": -0.0019511115264283666,
+    "high": 0.0008925701412827375,
+    "per_seed": [
+      -0.0011618739816515108,
+      0.0003777481335157644,
+      0.00029295370006857043
+    ]
+  }
+]

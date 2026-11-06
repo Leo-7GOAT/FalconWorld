@@ -1,0 +1,258 @@
+[
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.006709263858332387,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.0039228611674196265,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 5.311716140103216e-05,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 1,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 3.7786442910059506e-07,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.01919006250230816,
+    "position_error_m": 0.00345268293576916
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.00854866712659765,
+    "position_error_m": 0.0021104930101399555
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.00011960951586065655,
+    "position_error_m": 4.034128371103081e-05
+  },
+  {
+    "split": "test",
+    "horizon_steps": 5,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 8.457265078471121e-07,
+    "position_error_m": 1.6030153672383292e-07
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.023901266099182677,
+    "position_error_m": 0.03164904762227519
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.008886301404951943,
+    "position_error_m": 0.016038182507918407
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.00013913359079488358,
+    "position_error_m": 0.0003192074426169222
+  },
+  {
+    "split": "test",
+    "horizon_steps": 10,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 9.190068251139094e-07,
+    "position_error_m": 1.2636522288467543e-06
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.02560570937985242,
+    "position_error_m": 0.5357841915392072
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.007893791500333617,
+    "position_error_m": 0.1720776215470629
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.00012632969244743986,
+    "position_error_m": 0.003891552605509145
+  },
+  {
+    "split": "test",
+    "horizon_steps": 30,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 9.21550702685329e-07,
+    "position_error_m": 2.000223997281879e-05
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.008652955455504957,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.008972119456642832,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.007324783846305572,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 1,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.0073609334763173485,
+    "position_error_m": 0.0
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.023117174481697388,
+    "position_error_m": 0.005743503806076328
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.022614658082175134,
+    "position_error_m": 0.006345274587023852
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.018681718363279205,
+    "position_error_m": 0.006523233788624019
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 5,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.018698529805047027,
+    "position_error_m": 0.00652917357049178
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.025799067373982347,
+    "position_error_m": 0.03990350317002895
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.023814864410204264,
+    "position_error_m": 0.04163297405240069
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.02053589576712247,
+    "position_error_m": 0.04154917798047134
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 10,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.020549581127252144,
+    "position_error_m": 0.041588878902801975
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "rich",
+    "episodes": 30,
+    "steering_mae_rad": 0.028466558574224952,
+    "position_error_m": 0.392332587748396
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "affine",
+    "episodes": 30,
+    "steering_mae_rad": 0.02110764069312538,
+    "position_error_m": 0.35616965613134816
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "residual",
+    "episodes": 30,
+    "steering_mae_rad": 0.02023375087147148,
+    "position_error_m": 0.36712342052670677
+  },
+  {
+    "split": "ood",
+    "horizon_steps": 30,
+    "model": "mechanism",
+    "episodes": 30,
+    "steering_mae_rad": 0.0202447098350765,
+    "position_error_m": 0.36728714457606254
+  }
+]

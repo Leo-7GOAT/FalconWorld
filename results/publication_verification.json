@@ -158,6 +158,44 @@
       },
       "cost": "Model methods additionally use3000 offline interactions,256 actor warm-start Adam calls and model computations. Warm+training about2.61x/3.04x pure PPO; pretraining and selection extra.",
       "limitations": "Only3 training seeds per experiment. Long-budget ID return CI crosses0. Rich physics similarly helps; learned residual superiority not proven. Simulation only."
+    },
+    "residual_steering_mismatch": {
+      "date": "2026-11-06",
+      "plant": "v2 monotone smooth dead zone; v1 prototype excluded; new seed namespaces",
+      "full_suite": {
+        "passed": 141,
+        "subtests_passed": 31,
+        "seconds": 19.63
+      },
+      "published_new_tests": {
+        "passed": 3,
+        "seconds": 3.77
+      },
+      "primary_closed_loop": {
+        "episodes": 600,
+        "steps": 50931,
+        "audit_errors": 0
+      },
+      "prediction_audit": {
+        "episode_model_horizon_rows": 960,
+        "max_metric_difference": 8.596309310909822e-08,
+        "errors": 0
+      },
+      "exploratory_followup": {
+        "online_budgets": [
+          0,
+          2048
+        ],
+        "episodes_per_budget": 480,
+        "steps": [
+          42575,
+          41419
+        ],
+        "audit_errors": 0,
+        "not_primary_evidence": true
+      },
+      "key_result": "Relative to the same recalibrated affine physics base, ID 1-step steering MAE .003922861->.000053117rad; 3s position error .17207762->.00389155m; PPO ID raw return +3.3389 with paired CI[.5816,6.1799], both60/60 completed.",
+      "limits": "Synthetic only. Matched-structure physics predicts better. OOD and some closed-loop metrics do not improve consistently. Only3 training seeds; multiple comparisons uncorrected; no complete training execution trace."
     }
   }
 }

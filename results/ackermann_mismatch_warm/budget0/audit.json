@@ -1,0 +1,10 @@
+{
+  "status": "verified_complete",
+  "episodes": 480,
+  "steps": 42575,
+  "expected_episodes": 480,
+  "error_count": 0,
+  "errors": [],
+  "max_raw_reward_error": 7.105427357601002e-15,
+  "scope": "Independent truth dynamics, swept road footprint, rewards, termination, hashes, splits, zip/Adam budgets. No training sample trace; model branch individual samples not independently recoverable."
+}

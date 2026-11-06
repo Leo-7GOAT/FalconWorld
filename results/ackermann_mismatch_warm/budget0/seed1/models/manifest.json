@@ -1,0 +1,186 @@
+{
+  "training_episodes": 24,
+  "validation_episodes": 6,
+  "training_transitions": 2400,
+  "validation_transitions": 600,
+  "validation_steering_mae_rad": {
+    "rich": 0.006531068495146218,
+    "affine": 0.003960942840709366,
+    "residual": 3.597636332235508e-05,
+    "mechanism": 3.452817779939742e-07
+  },
+  "residual_fit_seconds": 0.9534379999968223,
+  "residual_training_log": [
+    {
+      "epoch": 0,
+      "validation_mse": 0.9875459671020508
+    },
+    {
+      "epoch": 5,
+      "validation_mse": 0.28384163975715637
+    },
+    {
+      "epoch": 10,
+      "validation_mse": 0.05081147328019142
+    },
+    {
+      "epoch": 15,
+      "validation_mse": 0.020940575748682022
+    },
+    {
+      "epoch": 20,
+      "validation_mse": 0.009801166132092476
+    },
+    {
+      "epoch": 25,
+      "validation_mse": 0.006059698294848204
+    },
+    {
+      "epoch": 30,
+      "validation_mse": 0.0039832633920013905
+    },
+    {
+      "epoch": 35,
+      "validation_mse": 0.0032355317380279303
+    },
+    {
+      "epoch": 40,
+      "validation_mse": 0.0022962873335927725
+    },
+    {
+      "epoch": 45,
+      "validation_mse": 0.0016352413222193718
+    },
+    {
+      "epoch": 50,
+      "validation_mse": 0.0012290672166272998
+    },
+    {
+      "epoch": 55,
+      "validation_mse": 0.0009760723332874477
+    },
+    {
+      "epoch": 60,
+      "validation_mse": 0.000836679944768548
+    },
+    {
+      "epoch": 65,
+      "validation_mse": 0.0008361564250662923
+    },
+    {
+      "epoch": 70,
+      "validation_mse": 0.0006114257266744971
+    },
+    {
+      "epoch": 75,
+      "validation_mse": 0.0005682844202965498
+    },
+    {
+      "epoch": 80,
+      "validation_mse": 0.0005517899408005178
+    },
+    {
+      "epoch": 85,
+      "validation_mse": 0.0005405952106229961
+    },
+    {
+      "epoch": 90,
+      "validation_mse": 0.0005316549795679748
+    },
+    {
+      "epoch": 95,
+      "validation_mse": 0.0003200447536073625
+    },
+    {
+      "epoch": 100,
+      "validation_mse": 0.0003660342190414667
+    },
+    {
+      "epoch": 105,
+      "validation_mse": 0.0002995408431161195
+    },
+    {
+      "epoch": 110,
+      "validation_mse": 0.0002756258472800255
+    },
+    {
+      "epoch": 115,
+      "validation_mse": 0.00021522169117815793
+    },
+    {
+      "epoch": 120,
+      "validation_mse": 0.00022523949155583978
+    },
+    {
+      "epoch": 125,
+      "validation_mse": 0.0002609916846267879
+    },
+    {
+      "epoch": 130,
+      "validation_mse": 0.0001919250498758629
+    },
+    {
+      "epoch": 135,
+      "validation_mse": 0.00019377152784727514
+    },
+    {
+      "epoch": 140,
+      "validation_mse": 0.00031108074472285807
+    },
+    {
+      "epoch": 145,
+      "validation_mse": 0.0002626510104164481
+    },
+    {
+      "epoch": 150,
+      "validation_mse": 0.00031775154639035463
+    },
+    {
+      "epoch": 155,
+      "validation_mse": 0.00015158507449086756
+    },
+    {
+      "epoch": 160,
+      "validation_mse": 0.0001078801869880408
+    },
+    {
+      "epoch": 165,
+      "validation_mse": 0.000129328400362283
+    },
+    {
+      "epoch": 170,
+      "validation_mse": 0.00020293702255003154
+    },
+    {
+      "epoch": 175,
+      "validation_mse": 0.00030177852022461593
+    },
+    {
+      "epoch": 180,
+      "validation_mse": 0.00014673078840132803
+    },
+    {
+      "epoch": 185,
+      "validation_mse": 0.00010269613994751126
+    },
+    {
+      "epoch": 190,
+      "validation_mse": 0.00011832417658297345
+    },
+    {
+      "epoch": 195,
+      "validation_mse": 0.0001880225754575804
+    },
+    {
+      "epoch": 199,
+      "validation_mse": 0.0001434945297660306
+    }
+  ],
+  "model_sha256": {
+    "affine.npz": "ca5cfb7edce7fd71906ccb9b6e71aad0b7d7507540d620004ebe2922db41d97f",
+    "data.npz": "cae44551f728edf944cfcf73e29f93b9037d9fe6788ec98f31bf3889a0d1f95b",
+    "mechanism.npz": "fa2a4d69b32ff798f2e9dcbce6104be577c8e1d2ae62394b5102d8b69be0f5f9",
+    "residual.npz": "400a757bd16fbc4e3ef2c86914e7232634e0bae116c46b0f6fff2eb4c51885c2",
+    "rich.npz": "383a87fdc1d2451ff2f16de7fdfcabd544bea814102a0481b6df3ee813077efe"
+  }
+}

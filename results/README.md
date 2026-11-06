@@ -11,6 +11,9 @@
 | `ackermann_gradient_selection/` | `outputs/ackermann_rl/model_gradient_selection/` | 仅验证集选择两个多步模型梯度候选；不访问新test |
 | `ackermann_gradient_final/` | `outputs/ackermann_rl/model_gradient_final/` | 新seed3/4/5，五方法、65536步、600新测试回合，含额外更新和平滑控制 |
 | `ackermann_gradient_efficiency/` | `outputs/ackermann_rl/model_gradient_efficiency/` | 新seed6/7/8，五方法、短预算、600新测试回合，含更充分总交互纯PPO控制 |
+| `ackermann_mismatch_v2/` | `outputs/ackermann_rl/friction_mismatch_v2/` | 单调死区失配，四预测模型、五PPO方法、600闭环回合，含完整机制物理强对照 |
+| `ackermann_mismatch_warm/` | `outputs/ackermann_rl/friction_mismatch_warm/` | 探索性补充，0/2048在线步各480次配对闭环运行，两预算都保留 |
+| `ackermann_mismatch_excluded_v1/` | `outputs/ackermann_rl/friction_mismatch/` | 被排除的非单调近似，仅作开发归档，不支持物理失配结论 |
 
 历史报告与 JSON 中记录的 `outputs/...` 按此表映射。Windows 相对路径分隔符保持原样；审计脚本会处理该记法。没有将训练、模型或测试轨迹按表现筛选；所有正式种子和方法完整保留。
 

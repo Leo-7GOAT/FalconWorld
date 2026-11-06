@@ -1,0 +1,8 @@
+{
+  "status": "verified_complete",
+  "episode_model_horizon_rows": 960,
+  "error_count": 0,
+  "errors": [],
+  "max_metric_difference": 8.596309310909822e-08,
+  "scope": "Reimplemented physics and neural forward in NumPy; no model/simulator modules imported; complete heldout episode means rebuilt."
+}
