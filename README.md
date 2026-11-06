@@ -4,11 +4,33 @@
 
 FalconWorld 将可辨识物理动力学、学习残差和前车运动历史组合成动作条件世界模型，用真值模拟器观测启动短模型分支，辅助 Stable-Baselines3 PPO 训练。训练后只需策略网络即可输出纵向控制动作。仓库包含训练代码、固定依赖、对照与消融、已训练策略、合成数据、完整正式测试轨迹和独立审计。
 
-当前完成的是**本地仿真研究**。正式 PPO 实验为一维跟驰；二维阿克曼与 CARLA 是前期世界模型＋MPC 工作。R550 实车 PPO 部署、转向控制、摄像头端到端驾驶及 Raspberry Pi 实时控制验收尚未完成。
+当前完成的是**本地仿真研究**：已有纵向跟驰 PPO，并新增二维阿克曼横纵向联合 PPO，直接输出加速度和前轮转角。CARLA 保留前期世界模型＋MPC 工作；R550 实车 PPO 部署、摄像头端到端驾驶及 Raspberry Pi 实时控制验收尚未完成。
 
 > 同新增在线步数下，世界模型辅助 PPO 的平均碰撞数减少，但相对纯 PPO 的回报差异 95% 区间跨零，种子差异明显，并有平顺性和计算成本代价。当前证据支持条件性收益，尚未证明稳定总体优势。
 
 [完整数学推导](docs/WORLD_MODEL_DERIVATION.md) · [正式实验报告](docs/SB3_RL_REPORT.md) · [实验协议](docs/SB3_RL_PROTOCOL.md) · [实验与策略文件](results/README.md) · [English overview](docs/PPO_PROJECT_EN.md)
+
+## 新增：横纵向联合 PPO（2026-11-06）
+
+已实际完成三训练种子、三方法、每任务65536在线步的二维训练与288回合冻结测试。PPO输出两个连续动作：期望加速度＋前轮转角，不需要传统横向控制器替代转向输出。
+
+|方法|ID完成/48|OOD完成/48|ID横向RMSE m|OOD横向RMSE m|
+|---|---:|---:|---:|---:|
+|纯PPO|48|48|0.100|0.139|
+|学习世界模型辅助PPO|34|28|0.556|0.665|
+|丰富物理模型辅助PPO|16|19|0.694|0.781|
+
+**本轮学习世界模型辅助弱于纯PPO。** 不能将纵向结果外推为横向收益。联合策略仍有转向振荡，零越界样本不代表实车安全。
+
+[联合控制接口与复现](docs/ACKERMANN_RL.md) · [全部种子与成本报告](results/ackermann_rl/REPORT.md) · [原始轨迹独立审计](results/ackermann_rl/audit.json)
+
+```powershell
+.\.venv\Scripts\python.exe run_ackermann_rl.py --preset quick --workers 3 --output outputs/ackermann_rl/new_run
+.\.venv\Scripts\python.exe scripts/audit_ackermann_rl.py --run outputs/ackermann_rl/new_run
+.\.venv\Scripts\python.exe scripts/report_ackermann_rl.py --run outputs/ackermann_rl/new_run
+```
+
+以下系统流程、四维模型和七方法表格仍对应原纵向研究；二维联合控制使用14维观测、连续双动作，细节见新增文档。
 
 ## 系统流程
 
@@ -89,7 +111,7 @@ u_t&=\mathcal S\!\left(s_t,\mathrm{clip}(u_{t-1}+\Delta u_j,-6,2)\right).
 \end{aligned}
 ```
 
-$\mathcal S$ 为公共安全过滤器，不是形式化安全保证。当前策略不输出航向或转角；$a_t$ 是仿真特权输入，实车需要另外估计。
+$\mathcal S$ 为公共安全过滤器，不是形式化安全保证。本节纵向策略不输出航向或转角；$a_t$ 是仿真特权输入，实车需要另外估计。
 
 每轮先采集 2048 条在线模拟器转移，再用**同一个尚未更新的行为策略**从本轮观测池抽根，生成一步模型分支。主方法用 1024 条合成样本替换学习 buffer 的一半；真实轨迹与每条模型分支分别计算 GAE，再调用官方 PPO 优化器。没有额外策略更新，不把不同分支拼成连续轨迹，也不混入旧策略离线 replay。
 

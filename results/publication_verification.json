@@ -77,6 +77,37 @@
       "browser_limitation": "Live browser connection timed out; validation uses exact TeX from GitHub GFM API output and locally rendered MathJax SVG previews. No live-browser success claimed.",
       "change_scope": "Documentation formatting only; no model, trajectory, training or numerical result changed.",
       "validation_limit": "The previous local MathJax pass did not establish GitHub browser compatibility: user reported a remaining cases rendering failure. This revision eliminates that environment instead of claiming the prior validation covered it."
+    },
+    "ackermann_joint_ppo": {
+      "date": "2026-11-06",
+      "source_project_full_suite": {
+        "passed": 135,
+        "subtests_passed": 31,
+        "seconds": 23.09
+      },
+      "published_copy_joint_tests": {
+        "passed": 5,
+        "seconds": 3.91
+      },
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "methods": [
+        "ppo",
+        "wm_ppo",
+        "physics_ppo"
+      ],
+      "online_steps_per_job": 65536,
+      "actual_adam_steps_per_job": 10240,
+      "trained_jobs": 9,
+      "test_episodes": 288,
+      "audit_error_count": 0,
+      "audited_transitions": 21588,
+      "checkpoint_load": "all nine final checkpoints loaded through official PPO.load and evaluated",
+      "result": "Pure PPO 48/48 ID and 48/48 OOD completed. Learned-world-model assisted PPO 34/48 ID,28/48 OOD; no demonstrated lateral benefit.",
+      "limits": "Known reference, privileged simulator actuators, synthetic parameters, no obstacles, steering oscillation, no visual inputs or hardware deployment."
     }
   }
 }

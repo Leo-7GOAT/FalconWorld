@@ -1,0 +1,23 @@
+{
+  "method": "wm_ppo",
+  "training_seed": 2,
+  "online_steps": 65536,
+  "optimizer_steps": 10240,
+  "synthetic_generated": 32768,
+  "synthetic_replaced": 32768,
+  "branch_metadata": {
+    "roots": 1024,
+    "fraction": 0.5,
+    "horizon": 1,
+    "max_logprob_error": 0.0,
+    "terminal_count": 45,
+    "max_value_error": 0.0
+  },
+  "offline_interactions": 3000,
+  "training_seconds": 59.56870250002248,
+  "elapsed_seconds": 60.17869209998753,
+  "checkpoint_sha256": "0245baca1d576f85d2079c1507c505c8c0b74fd7300d4d9ccfc0dd5009b49ce8",
+  "test_sha256": "803596981ae33c8f5521efeb891c3f1250d8237508a11a66d12956bd351c5c0f",
+  "trajectory_sha256": "ab982a7e1183a2d290277984bcfc90b9f6817a6a98093cac4e8d1b8befd1e817",
+  "test_episodes": 32
+}

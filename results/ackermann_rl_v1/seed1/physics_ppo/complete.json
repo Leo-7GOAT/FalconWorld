@@ -1,0 +1,23 @@
+{
+  "method": "physics_ppo",
+  "training_seed": 1,
+  "online_steps": 65536,
+  "optimizer_steps": 10240,
+  "synthetic_generated": 32768,
+  "synthetic_replaced": 32768,
+  "branch_metadata": {
+    "roots": 1024,
+    "fraction": 0.5,
+    "horizon": 1,
+    "max_logprob_error": 0.0,
+    "terminal_count": 41,
+    "max_value_error": 0.0
+  },
+  "offline_interactions": 3000,
+  "training_seconds": 49.10863930001506,
+  "elapsed_seconds": 49.607194799988065,
+  "checkpoint_sha256": "b1c6e33ce87221eb677dc0a1b9c22bb79e8e9426f64d2be42373dc3dc6b5ba6e",
+  "test_sha256": "43d4a0a882194cb7adabf04d27e667cd22062adf11c278aceaeadb212ce80d46",
+  "trajectory_sha256": "40cce9e39ece965a20523da08b66105e14d71a0ef5399ddea132228537e6f8b6",
+  "test_episodes": 32
+}

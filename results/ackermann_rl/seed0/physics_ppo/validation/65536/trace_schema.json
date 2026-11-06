@@ -1,0 +1,27 @@
+{
+  "columns": [
+    "state_0",
+    "state_1",
+    "state_2",
+    "state_3",
+    "state_4",
+    "state_5",
+    "next_state_0",
+    "next_state_1",
+    "next_state_2",
+    "next_state_3",
+    "next_state_4",
+    "next_state_5",
+    "previous_accel",
+    "previous_steer",
+    "raw_action_accel",
+    "raw_action_steer",
+    "applied_accel_mps2",
+    "applied_steer_rad",
+    "reward",
+    "road_departure",
+    "success",
+    "terminated",
+    "truncated"
+  ]
+}

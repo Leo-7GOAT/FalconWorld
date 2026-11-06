@@ -1,0 +1,165 @@
+{
+  "episodes": [
+    {
+      "seed": 80000000,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000001,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000002,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000003,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000004,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000005,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000006,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000007,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000008,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000009,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000010,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000011,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000012,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000013,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000014,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000015,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000016,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000017,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000018,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000019,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000020,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000021,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000022,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000023,
+      "split": "train",
+      "steps": 100
+    },
+    {
+      "seed": 80000024,
+      "split": "validation",
+      "steps": 100
+    },
+    {
+      "seed": 80000025,
+      "split": "validation",
+      "steps": 100
+    },
+    {
+      "seed": 80000026,
+      "split": "validation",
+      "steps": 100
+    },
+    {
+      "seed": 80000027,
+      "split": "validation",
+      "steps": 100
+    },
+    {
+      "seed": 80000028,
+      "split": "validation",
+      "steps": 100
+    },
+    {
+      "seed": 80000029,
+      "split": "validation",
+      "steps": 100
+    }
+  ],
+  "interactions": 3000,
+  "train": 2400,
+  "validation": 600,
+  "test": 0,
+  "dataset_sha256": "2b6ff17e0d69bca91fac0cacb399857b093df35f0ee06fb7a71566921b718f73",
+  "training_seconds": 0.02638759999535978,
+  "model_sha256": {
+    "physical.npz": "87f6770c37d4fd75365fcca0a794c3de9c421a4bab745e5a76d767396c9156a9",
+    "residual.npz": "2c105475238540ef3824585baa310f9b6fa48f72ef1bcfa570ac6cf58453d780",
+    "rich_physical.npz": "fdad929d2aae2749f8e48d094b2b30a6e067f53ea9521b9655d16a980e4196c2"
+  }
+}

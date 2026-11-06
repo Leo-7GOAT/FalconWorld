@@ -1,0 +1,74 @@
+[
+  {
+    "method": "ppo",
+    "distribution": "id",
+    "episodes": 48,
+    "completions": 0,
+    "departures": 48,
+    "return_raw": -15.192477706374165,
+    "progress_m": 7.88757073650914,
+    "lateral_rmse_m": 0.9518443843163887,
+    "speed_rmse_mps": 0.6599345403691147,
+    "steering_rate_rms_radps": 0.47803531885129064
+  },
+  {
+    "method": "ppo",
+    "distribution": "ood",
+    "episodes": 48,
+    "completions": 0,
+    "departures": 48,
+    "return_raw": -12.244987622668503,
+    "progress_m": 10.241502837074828,
+    "lateral_rmse_m": 0.991961392150919,
+    "speed_rmse_mps": 0.583799290373899,
+    "steering_rate_rms_radps": 0.47765044328206113
+  },
+  {
+    "method": "wm_ppo",
+    "distribution": "id",
+    "episodes": 48,
+    "completions": 0,
+    "departures": 48,
+    "return_raw": -15.79372517851281,
+    "progress_m": 6.936222337979444,
+    "lateral_rmse_m": 0.9817235006712463,
+    "speed_rmse_mps": 0.8105551459860179,
+    "steering_rate_rms_radps": 0.4081284835333972
+  },
+  {
+    "method": "wm_ppo",
+    "distribution": "ood",
+    "episodes": 48,
+    "completions": 0,
+    "departures": 48,
+    "return_raw": -12.071863041099917,
+    "progress_m": 10.633709827190614,
+    "lateral_rmse_m": 0.972386940752043,
+    "speed_rmse_mps": 0.7545874477469585,
+    "steering_rate_rms_radps": 0.3885195907979699
+  },
+  {
+    "method": "physics_ppo",
+    "distribution": "id",
+    "episodes": 48,
+    "completions": 0,
+    "departures": 48,
+    "return_raw": -15.338304231450403,
+    "progress_m": 7.621688555124586,
+    "lateral_rmse_m": 0.9655787395502031,
+    "speed_rmse_mps": 0.7164695140950647,
+    "steering_rate_rms_radps": 0.5081590311646367
+  },
+  {
+    "method": "physics_ppo",
+    "distribution": "ood",
+    "episodes": 48,
+    "completions": 0,
+    "departures": 48,
+    "return_raw": -12.244631514817682,
+    "progress_m": 10.069855795053654,
+    "lateral_rmse_m": 0.9859465443338089,
+    "speed_rmse_mps": 0.6676878942769043,
+    "steering_rate_rms_radps": 0.49936127774343514
+  }
+]

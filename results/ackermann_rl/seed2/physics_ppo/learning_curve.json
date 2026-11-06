@@ -1,0 +1,26 @@
+[
+  {
+    "online_steps": 16384,
+    "mean_return": -10.964609881661685,
+    "completion_rate": 0.0,
+    "departure_rate": 0.75
+  },
+  {
+    "online_steps": 32768,
+    "mean_return": -5.794958314242836,
+    "completion_rate": 0.0,
+    "departure_rate": 0.75
+  },
+  {
+    "online_steps": 49152,
+    "mean_return": 3.533142767269129,
+    "completion_rate": 0.0,
+    "departure_rate": 1.0
+  },
+  {
+    "online_steps": 65536,
+    "mean_return": 3.444051867284867,
+    "completion_rate": 0.0,
+    "departure_rate": 1.0
+  }
+]

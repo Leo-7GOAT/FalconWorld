@@ -1,0 +1,16 @@
+{
+  "method": "ppo",
+  "training_seed": 0,
+  "online_steps": 65536,
+  "optimizer_steps": 10240,
+  "synthetic_generated": 0,
+  "synthetic_replaced": 0,
+  "branch_metadata": {},
+  "offline_interactions": 0,
+  "training_seconds": 52.005355899978895,
+  "elapsed_seconds": 52.59356839998509,
+  "checkpoint_sha256": "ead8c7ffcff0d061a3f20932317b77e94ec330442478bcaa696dffac6edd04d5",
+  "test_sha256": "3bc23f2a336ea6165d6ddeec6c33e841beb988796262f20753fd4d8246992927",
+  "trajectory_sha256": "40022913cb5c11274414cf168fa4a8bfa5e12710734f7a173f9777d183b6eb34",
+  "test_episodes": 32
+}

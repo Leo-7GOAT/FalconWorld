@@ -1,0 +1,44 @@
+{
+  "preset": "quick",
+  "spec": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "steps": 65536,
+    "pairs": 8
+  },
+  "methods": [
+    "ppo",
+    "wm_ppo",
+    "physics_ppo"
+  ],
+  "policy_config": {
+    "n_steps": 2048,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5
+  },
+  "sources": {
+    "run_ackermann_rl.py": "abf75e065c8721e00d724a00a7373fdd4eec32c16e5577c72a734430b189e271",
+    "falconworld/ackermann_rl.py": "886ff67c5aba442e95026a49e89a58c09ea199bf82a662731a47cfae0984bfff",
+    "falconworld/ackermann.py": "43064e9bfed6ba7c05f33c4348b15635627dee392eff22227958c381c07e02c1"
+  },
+  "policy_selection": "fixed final budget; validation monitoring only",
+  "observation": "14D, privileged actuator states and known route geometry; no hidden condition",
+  "action": "continuous normalized acceleration and front-wheel angle; limits and slew applied equally",
+  "model": "train/validation ridge-selected residual; no test fitting; frozen before policy training",
+  "model_branch": "one step; half-buffer replacement; raw Gaussian actions/logprobs; terminal mask; no extra updates",
+  "limits": "simulation only; no visual input, obstacle routing, vehicle deployment or general superiority claim",
+  "versions": {
+    "torch": "2.15.0+cpu",
+    "numpy": "2.4.6"
+  }
+}
