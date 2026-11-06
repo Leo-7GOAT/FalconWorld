@@ -8,6 +8,9 @@
 | `ppo_reference_204800/` | `outputs/rl_sb3/reference_204800/` | 3 seeds 纯 PPO、240 测试回合、每 seed 204800 在线步 |
 | `ackermann_rl/` | `outputs/ackermann_rl/tracking_v2_quick/` | 新增横纵向联合控制，3 seeds × 3方法、9策略、288回合，独立审计通过 |
 | `ackermann_rl_v1/` | `outputs/ackermann_rl/quick/` | 奖励修正前完整失败轮；不能与v2混合排名或作为当前奖励的复现结果 |
+| `ackermann_gradient_selection/` | `outputs/ackermann_rl/model_gradient_selection/` | 仅验证集选择两个多步模型梯度候选；不访问新test |
+| `ackermann_gradient_final/` | `outputs/ackermann_rl/model_gradient_final/` | 新seed3/4/5，五方法、65536步、600新测试回合，含额外更新和平滑控制 |
+| `ackermann_gradient_efficiency/` | `outputs/ackermann_rl/model_gradient_efficiency/` | 新seed6/7/8，五方法、短预算、600新测试回合，含更充分总交互纯PPO控制 |
 
 历史报告与 JSON 中记录的 `outputs/...` 按此表映射。Windows 相对路径分隔符保持原样；审计脚本会处理该记法。没有将训练、模型或测试轨迹按表现筛选；所有正式种子和方法完整保留。
 

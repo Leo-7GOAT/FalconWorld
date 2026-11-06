@@ -1,0 +1,522 @@
+[
+  {
+    "control": "ppo",
+    "distribution": "id",
+    "metric": "return_raw",
+    "difference": 1.9212863972479155,
+    "low": -1.4176045818621412,
+    "high": 6.07553753249951,
+    "per_seed": [
+      0.005832389008232042,
+      1.1501661683970326,
+      4.607860634338482
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "id",
+    "metric": "completed",
+    "difference": 0.03333333333333333,
+    "low": -0.05,
+    "high": 0.13333333333333333,
+    "per_seed": [
+      -0.05,
+      0.05,
+      0.1
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "id",
+    "metric": "lateral_rmse_m",
+    "difference": -0.024961306773316753,
+    "low": -0.050822131865056325,
+    "high": 0.0026657405027730647,
+    "per_seed": [
+      -0.050554533366770904,
+      0.005964281674612137,
+      -0.030293668627791488
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "id",
+    "metric": "speed_rmse_mps",
+    "difference": -0.05808542474453361,
+    "low": -0.09532395643310103,
+    "high": -0.019650328675427337,
+    "per_seed": [
+      -0.028253583783208885,
+      -0.09431008451359747,
+      -0.0516926059367945
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "id",
+    "metric": "steering_rate_rms_radps",
+    "difference": -0.21815385467273457,
+    "low": -0.6357751618428884,
+    "high": -0.00631889862799066,
+    "per_seed": [
+      -0.6392794127910671,
+      -0.007258711297706827,
+      -0.00792343992942987
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "ood",
+    "metric": "return_raw",
+    "difference": 0.8915316320942434,
+    "low": 0.16740278316492435,
+    "high": 1.9232788282857576,
+    "per_seed": [
+      2.041771020948331,
+      0.29906309942433396,
+      0.3337607759100649
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "ood",
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "ood",
+    "metric": "lateral_rmse_m",
+    "difference": -0.0454759088335146,
+    "low": -0.05815528267202296,
+    "high": -0.03288738291732039,
+    "per_seed": [
+      -0.04072790296090184,
+      -0.05655368771669119,
+      -0.03914613582295077
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "ood",
+    "metric": "speed_rmse_mps",
+    "difference": -0.15619294646691953,
+    "low": -0.20649463564530218,
+    "high": -0.08936971335310387,
+    "per_seed": [
+      -0.1893447987199588,
+      -0.08501152993975486,
+      -0.19422251074104482
+    ]
+  },
+  {
+    "control": "ppo",
+    "distribution": "ood",
+    "metric": "steering_rate_rms_radps",
+    "difference": -0.21823465865224215,
+    "low": -0.6032966916022464,
+    "high": -0.01852546274453709,
+    "per_seed": [
+      -0.6068100340427693,
+      -0.018338333127671313,
+      -0.029555608786285704
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "id",
+    "metric": "return_raw",
+    "difference": 1.3677279787313084,
+    "low": -0.7506092905950055,
+    "high": 3.5357098973990073,
+    "per_seed": [
+      1.7174937205795004,
+      0.7775380388536703,
+      1.608152176760754
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "id",
+    "metric": "completed",
+    "difference": 0.0,
+    "low": -0.06666666666666667,
+    "high": 0.06666666666666667,
+    "per_seed": [
+      -0.05,
+      0.05,
+      0.0
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "id",
+    "metric": "lateral_rmse_m",
+    "difference": -0.028618069302269702,
+    "low": -0.0548279959692476,
+    "high": 0.007072712458232653,
+    "per_seed": [
+      -0.05464106846671203,
+      0.009417149041311485,
+      -0.04063028848140857
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "id",
+    "metric": "speed_rmse_mps",
+    "difference": -0.03179212002180474,
+    "low": -0.08585208973584832,
+    "high": 0.011462943399777987,
+    "per_seed": [
+      -0.014576620663048864,
+      -0.08814069111102953,
+      0.0073409517086641726
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "id",
+    "metric": "steering_rate_rms_radps",
+    "difference": -0.2170526534402056,
+    "low": -0.6365806292025228,
+    "high": -0.004910897940865797,
+    "per_seed": [
+      -0.6388386825448761,
+      -0.006767050098340777,
+      -0.005552227677399868
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "ood",
+    "metric": "return_raw",
+    "difference": 0.8036246066526507,
+    "low": 0.19391041832595637,
+    "high": 1.7020382473599427,
+    "per_seed": [
+      1.7223817444393597,
+      0.4093003077692508,
+      0.27919176774934157
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "ood",
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "ood",
+    "metric": "lateral_rmse_m",
+    "difference": -0.05170399434431776,
+    "low": -0.06555499091639824,
+    "high": -0.039052567385786705,
+    "per_seed": [
+      -0.048541913272140955,
+      -0.06380382741773745,
+      -0.042766242343074856
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "ood",
+    "metric": "speed_rmse_mps",
+    "difference": -0.11984334940626407,
+    "low": -0.16502526708779455,
+    "high": -0.08138522570973708,
+    "per_seed": [
+      -0.16596968337935625,
+      -0.08668941249748334,
+      -0.10687095234195258
+    ]
+  },
+  {
+    "control": "ppo_compute",
+    "distribution": "ood",
+    "metric": "steering_rate_rms_radps",
+    "difference": -0.2167370222502652,
+    "low": -0.603920413897758,
+    "high": -0.01693165211832101,
+    "per_seed": [
+      -0.6062853441543247,
+      -0.016540530283834946,
+      -0.027385192312635975
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "id",
+    "metric": "return_raw",
+    "difference": 8.624182865724082,
+    "low": 1.5903781832758495,
+    "high": 20.072692072740207,
+    "per_seed": [
+      21.10586701493455,
+      2.9069707104852798,
+      1.859710871752408
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "id",
+    "metric": "completed",
+    "difference": -0.016666666666666666,
+    "low": -0.06666666666666667,
+    "high": 0.0,
+    "per_seed": [
+      -0.05,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "id",
+    "metric": "lateral_rmse_m",
+    "difference": -0.05907473674144494,
+    "low": -0.16116455906822444,
+    "high": 0.0020404334305687308,
+    "per_seed": [
+      -0.1645953940008758,
+      0.003000663689148187,
+      -0.015629479912607186
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "id",
+    "metric": "speed_rmse_mps",
+    "difference": -0.09813760574378945,
+    "low": -0.26241642152383626,
+    "high": 0.0063639210732461225,
+    "per_seed": [
+      -0.27398581013416684,
+      -0.02037040985368244,
+      -5.659724351909229e-05
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "id",
+    "metric": "steering_rate_rms_radps",
+    "difference": -0.05069257090142219,
+    "low": -0.13710664887014176,
+    "high": -0.0012520738650928342,
+    "per_seed": [
+      -0.14578766987925557,
+      -0.0017005670749927538,
+      -0.0045894757500183235
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "ood",
+    "metric": "return_raw",
+    "difference": 2.7294684237885423,
+    "low": -0.2169952375934556,
+    "high": 8.084467934387417,
+    "per_seed": [
+      8.233963866069015,
+      0.13417400634598237,
+      -0.17973260104937056
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "ood",
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "ood",
+    "metric": "lateral_rmse_m",
+    "difference": -0.0826667294154227,
+    "low": -0.1681339872722268,
+    "high": -0.016275528899851878,
+    "per_seed": [
+      -0.17495763623920746,
+      -0.05878598137887349,
+      -0.014256570628187245
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "ood",
+    "metric": "speed_rmse_mps",
+    "difference": -0.07103045103524903,
+    "low": -0.1816083372070465,
+    "high": 0.06811527387537235,
+    "per_seed": [
+      0.068614775461537,
+      -0.10058547905958504,
+      -0.18112064950769907
+    ]
+  },
+  {
+    "control": "smooth_ppo",
+    "distribution": "ood",
+    "metric": "steering_rate_rms_radps",
+    "difference": 0.0049243564984440425,
+    "low": -0.025610379952942502,
+    "high": 0.041640738476645504,
+    "per_seed": [
+      0.04385274341455243,
+      -0.002120336203545253,
+      -0.026959337715675047
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "id",
+    "metric": "return_raw",
+    "difference": 0.38101768210368286,
+    "low": -2.531528203145657,
+    "high": 4.52545575044435,
+    "per_seed": [
+      -0.16393214779920556,
+      -2.3171176501546626,
+      3.624102844264917
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "id",
+    "metric": "completed",
+    "difference": 0.016666666666666666,
+    "low": -0.06666666666666667,
+    "high": 0.11666666666666667,
+    "per_seed": [
+      -0.05,
+      0.0,
+      0.1
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "id",
+    "metric": "lateral_rmse_m",
+    "difference": 0.0023038833810377387,
+    "low": -0.004632063703204553,
+    "high": 0.008880048827376752,
+    "per_seed": [
+      0.0032040584735671443,
+      0.008415029672491085,
+      -0.004707438002945013
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "id",
+    "metric": "speed_rmse_mps",
+    "difference": -0.00527088480615718,
+    "low": -0.08072134730465928,
+    "high": 0.11855056371212967,
+    "per_seed": [
+      0.12456936153313966,
+      -0.08119769871063257,
+      -0.05918431724097863
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "id",
+    "metric": "steering_rate_rms_radps",
+    "difference": -0.16163798941595864,
+    "low": -0.6285917526035038,
+    "high": 0.14224866760500873,
+    "per_seed": [
+      -0.6302862966091286,
+      0.14959406264234557,
+      -0.0042217342810928205
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "ood",
+    "metric": "return_raw",
+    "difference": -0.19594006388078664,
+    "low": -1.0896475114633881,
+    "high": 0.6411485336403118,
+    "per_seed": [
+      0.6606144475789713,
+      -1.1268771989801998,
+      -0.12155744024113133
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "ood",
+    "metric": "completed",
+    "difference": 0.0,
+    "low": 0.0,
+    "high": 0.0,
+    "per_seed": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "ood",
+    "metric": "lateral_rmse_m",
+    "difference": -0.00465565947736772,
+    "low": -0.014086766298113436,
+    "high": 0.0038137286898570584,
+    "per_seed": [
+      -7.304191242188638e-05,
+      -0.014783196948037586,
+      0.0008892604283563157
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "ood",
+    "metric": "speed_rmse_mps",
+    "difference": -0.06022807442538494,
+    "low": -0.17435272490607573,
+    "high": 0.14750143870400834,
+    "per_seed": [
+      0.14964086327592224,
+      -0.1720566527223549,
+      -0.15826843382972225
+    ]
+  },
+  {
+    "control": "physics_gradient",
+    "distribution": "ood",
+    "metric": "steering_rate_rms_radps",
+    "difference": -0.011738400278926357,
+    "low": -0.5771059388118366,
+    "high": 0.5636511204258644,
+    "per_seed": [
+      -0.5812628451101732,
+      0.5703102698949432,
+      -0.0242626256215491
+    ]
+  }
+]

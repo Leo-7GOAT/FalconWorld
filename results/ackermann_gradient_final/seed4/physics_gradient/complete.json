@@ -1,0 +1,26 @@
+{
+  "method": "physics_gradient",
+  "training_seed": 4,
+  "online_steps": 65536,
+  "warm_steps": 256,
+  "policy_optimizer_steps": 10240,
+  "total_optimizer_steps": 10496,
+  "aux_updates": 2560,
+  "imagined_steps": 917504,
+  "offline_interactions": 3000,
+  "warm_seconds": 8.584120499988785,
+  "training_seconds": 123.21020339999814,
+  "config": {
+    "weight": 1.0,
+    "horizon": 16,
+    "warm_steps": 256,
+    "interval": 4
+  },
+  "checkpoint_sha256": "80d16291d83d843d16a59ef217c84b41048794527b8454172e1faf95ab77aa69",
+  "test_episodes": 40,
+  "evaluation_sha256": "7d142ce7734d78558988cbf0425544b5acecd7d3ff30f14016b43e9b4f8ff906",
+  "trajectory_sha256": "7c61595a8195dbf71a5173a1ebdf039cd94372472292a73b6f39850f3cdf04ca",
+  "mean_return": 144.29416896205512,
+  "completion_rate": 1.0,
+  "lateral_rmse_m": 0.0988249388441298
+}

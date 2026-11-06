@@ -1,0 +1,51 @@
+{
+  "stage": "select",
+  "seeds": [
+    0,
+    1
+  ],
+  "online_steps": 16384,
+  "methods": [
+    "a",
+    "b"
+  ],
+  "candidates": {
+    "a": {
+      "weight": 0.3,
+      "horizon": 12,
+      "warm_steps": 128,
+      "interval": 4
+    },
+    "b": {
+      "weight": 1.0,
+      "horizon": 16,
+      "warm_steps": 256,
+      "interval": 4
+    }
+  },
+  "selection": null,
+  "selection_sha256": null,
+  "primary": "new test mean raw return, with completion not lower; lateral RMSE and steering rate secondary",
+  "selection_rule": "highest validation completion averaged over both seeds, then highest validation mean raw return",
+  "namespaces": {
+    "training": 10000000,
+    "offline": 80000000,
+    "warm_roots": 72000000,
+    "selection_validation": 88000000,
+    "final_test": 95300000
+  },
+  "changes": "real rollout and GAE kept intact; actor-only differentiable model cost before joint backward; warm and online gradients counted separately",
+  "sources": {
+    "run_ackermann_improvement.py": "85b610e0f1f83b61b47da2d9f0cfe8750d49fc8faacc6cee4cbfc8afc307f4a8",
+    "falconworld/ackermann_differentiable.py": "f688702e4f753144a3e2896b347af25b690851cce17d9ed898a41c670745f064",
+    "falconworld/ackermann_model_gradient.py": "439544ad491a0092a8beb2a74a5754a1fb4f264ef1134cba6414687cd8bcc70b",
+    "falconworld/ackermann_rl.py": "767d7e7a2d69c4bc9ef00ef1cf72fd002b28e62e1a333c0530e2ef7e9667f18e",
+    "falconworld/ackermann.py": "43064e9bfed6ba7c05f33c4348b15635627dee392eff22227958c381c07e02c1",
+    "run_ackermann_rl.py": "098e30ea15fcc093dfa09d44abf81e671ff873d3ee31f0d95420ee8d43b6edcb"
+  },
+  "versions": {
+    "torch": "2.15.0+cpu",
+    "numpy": "2.4.6"
+  },
+  "limitation": "simulation; sampled imagined roots; analytic route known; extra offline/model/gradient costs; no guaranteed improvement"
+}

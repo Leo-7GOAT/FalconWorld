@@ -1,0 +1,26 @@
+{
+  "method": "wm_gradient",
+  "training_seed": 0,
+  "online_steps": 16384,
+  "warm_steps": 256,
+  "policy_optimizer_steps": 2560,
+  "total_optimizer_steps": 2816,
+  "aux_updates": 640,
+  "imagined_steps": 425984,
+  "offline_interactions": 3000,
+  "warm_seconds": 8.98945970000932,
+  "training_seconds": 35.50856090002344,
+  "config": {
+    "weight": 1.0,
+    "horizon": 16,
+    "warm_steps": 256,
+    "interval": 4
+  },
+  "checkpoint_sha256": "3f9e99828e9dc3dc6c71cb19e77944a498a839168c7d5a16a0f45a2a287a3324",
+  "test_episodes": 16,
+  "evaluation_sha256": "38e6a693f5ea31177152cb7dc8ee12bd85c2907bcf4e8ec0824195ede81022cb",
+  "trajectory_sha256": "a4aeb33e77ddd3cd42f129267cee12307b4d1a45e085b7ccab126d62e9deffea",
+  "mean_return": 144.471391154082,
+  "completion_rate": 1.0,
+  "lateral_rmse_m": 0.12490721464412435
+}

@@ -15,10 +15,16 @@ def sha(path):
 
 def audit(root):
     registration=json.loads((root/'registration.json').read_text(encoding='utf8'))
-    spec=registration['spec'];errors=[];episodes=0;steps=0;identities=set();max_error=0.
+    gradient=registration.get('stage') in ('final','efficiency')
+    spec=registration.get('spec',dict(seeds=registration.get('seeds'),steps=registration.get('online_steps'),pairs=10))
+    errors=[];episodes=0;steps=0;identities=set();max_error=0.
     def require(condition, label):
         if not condition:errors.append(label)
-    require(registration['reward_version']=='tracking-v2-bounded-survival','wrong_reward_version')
+    if gradient:
+        require("REWARD_VERSION = 'tracking-v2-bounded-survival'" in
+            (root/'source_snapshot/falconworld/ackermann_rl.py').read_text(encoding='utf8'),'wrong_reward_version')
+    else:
+        require(registration['reward_version']=='tracking-v2-bounded-survival','wrong_reward_version')
     for name,digest in registration['sources'].items():
         require(sha(root/'source_snapshot'/name)==digest, 'source_snapshot:'+name)
     for seed in spec['seeds']:
@@ -31,17 +37,31 @@ def audit(root):
         for method in registration['methods']:
             folder=root/f'seed{seed}'/method;ledger=json.loads((folder/'complete.json').read_text())
             require(sha(folder/'final_policy.zip')==ledger['checkpoint_sha256'],'policy_hash')
-            require(sha(folder/'test/episodes.jsonl')==ledger['test_sha256'],'test_hash')
+            require(sha(folder/'test/episodes.jsonl')==ledger['evaluation_sha256' if gradient else 'test_sha256'],'test_hash')
             require(sha(folder/'test/trajectories.npz')==ledger['trajectory_sha256'],'trajectory_hash')
-            expected_steps=spec['steps']//2048*320
-            require(ledger['online_steps']==spec['steps'] and ledger['optimizer_steps']==expected_steps,'ledger_budget')
-            require(ledger['synthetic_replaced']==(0 if method=='ppo' else spec['steps']//2),'model_replacement_count')
+            expected_online=20480 if method=='ppo_total_budget' else spec['steps']
+            expected_steps=expected_online//2048*320
+            require(ledger['online_steps']==expected_online,'online_budget')
+            if gradient:
+                cfg=registration['selection']['config'];warm=0 if method in ('ppo','ppo_compute','ppo_total_budget') else cfg['warm_steps']
+                extra=cfg['warm_steps'] if method=='ppo_compute' else 0
+                require(ledger['warm_steps']==warm and ledger['policy_optimizer_steps']==expected_steps+extra,'gradient_budget')
+                require(ledger['total_optimizer_steps']==expected_steps+extra+warm,'total_gradient_budget')
+                expected_aux=0 if method in ('ppo','ppo_compute','ppo_total_budget') else expected_steps//cfg['interval']
+                require(ledger['aux_updates']==expected_aux,'aux_update_count')
+                expected_imagined=(warm*64+expected_aux*16)*cfg['horizon'] if method in ('wm_gradient','physics_gradient') else 0
+                require(ledger['imagined_steps']==expected_imagined,'imagined_step_count')
+                expected_adam={expected_steps+extra} if not warm else {expected_steps,expected_steps+warm}
+            else:
+                require(ledger['online_steps']==spec['steps'] and ledger['optimizer_steps']==expected_steps,'ledger_budget')
+                require(ledger['synthetic_replaced']==(0 if method=='ppo' else spec['steps']//2),'model_replacement_count')
+                expected_adam={expected_steps}
             with zipfile.ZipFile(folder/'final_policy.zip') as archive:
                 data=json.loads(archive.read('data'))
-                require(data['num_timesteps']==spec['steps'],'zip_online_steps')
+                require(data['num_timesteps']==expected_online,'zip_online_steps')
                 optim=torch.load(BytesIO(archive.read('policy.optimizer.pth')),weights_only=False,map_location='cpu')
-                require({int(v['step'].item()) for v in optim['state'].values() if 'step' in v}=={expected_steps},'actual_adam_count')
-                require(not any(k in data for k in ('world_model','branch_rng','branch_torch_state')),'external_model_saved')
+                require({int(v['step'].item()) for v in optim['state'].values() if 'step' in v}==expected_adam,'actual_adam_count')
+                require(not any(k in data for k in ('world_model','branch_rng','branch_torch_state','world_dynamics')),'external_model_saved')
             records=[json.loads(line) for line in (folder/'test/episodes.jsonl').read_text().splitlines()]
             require(len(records)==4*spec['pairs'],'episode_count')
             with np.load(folder/'test/trajectories.npz',allow_pickle=False) as traces:
@@ -96,6 +116,10 @@ def audit(root):
                     require(bool(success[-1])==record['completed'] and bool(fail[-1])==record['road_departure'],'completion_label')
     expected=len(spec['seeds'])*len(registration['methods'])*4*spec['pairs']
     require(episodes==expected,'global_case_count')
+    namespace=99_000_000 if registration.get('stage')=='efficiency' else 95_000_000 if gradient else 90_000_000
+    expected_keys={(seed,method,namespace+seed*100_000+ci*10_000+fi*1000+pair)
+        for seed in spec['seeds'] for method in registration['methods'] for ci in (0,1) for fi in (0,1) for pair in range(spec['pairs'])}
+    require(identities==expected_keys,'heldout_case_identities')
     return dict(status='verified_complete' if not errors else 'failed',episodes=episodes,steps=steps,
         expected_episodes=expected,error_count=len(errors),errors=errors,max_raw_reward_error=max_error,
         scope='Independent truth dynamics, swept road footprint, rewards, termination, hashes, splits, zip/Adam budgets. No training sample trace; model branch individual samples not independently recoverable.')

@@ -1,0 +1,26 @@
+{
+  "method": "smooth_ppo",
+  "training_seed": 3,
+  "online_steps": 65536,
+  "warm_steps": 256,
+  "policy_optimizer_steps": 10240,
+  "total_optimizer_steps": 10496,
+  "aux_updates": 2560,
+  "imagined_steps": 0,
+  "offline_interactions": 0,
+  "warm_seconds": 0.3422264999826439,
+  "training_seconds": 55.04099709997536,
+  "config": {
+    "weight": 1.0,
+    "horizon": 16,
+    "warm_steps": 256,
+    "interval": 4
+  },
+  "checkpoint_sha256": "ea2a61a054aeb46f8c9a4630894e6b2b8b9fb23f709fd39467ecb35a9972d549",
+  "test_episodes": 40,
+  "evaluation_sha256": "756b9d94606866af1fe4a7c6706d20d9b96056a55a12538f33e0513f42c41aa0",
+  "trajectory_sha256": "f740bc7fc29dc365898333aee2903444dc2c2172f35b2de6481cee664ecf62e5",
+  "mean_return": 125.8667722336775,
+  "completion_rate": 1.0,
+  "lateral_rmse_m": 0.24598113183823278
+}

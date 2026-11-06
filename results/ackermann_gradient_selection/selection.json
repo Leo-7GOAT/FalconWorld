@@ -1,0 +1,36 @@
+{
+  "candidate": "b",
+  "config": {
+    "weight": 1.0,
+    "horizon": 16,
+    "warm_steps": 256,
+    "interval": 4
+  },
+  "completion": 1.0,
+  "mean_return": 141.20795802877376,
+  "validation_scores": [
+    {
+      "candidate": "a",
+      "config": {
+        "weight": 0.3,
+        "horizon": 12,
+        "warm_steps": 128,
+        "interval": 4
+      },
+      "completion": 0.90625,
+      "mean_return": 111.77758452974257
+    },
+    {
+      "candidate": "b",
+      "config": {
+        "weight": 1.0,
+        "horizon": 16,
+        "warm_steps": 256,
+        "interval": 4
+      },
+      "completion": 1.0,
+      "mean_return": 141.20795802877376
+    }
+  ],
+  "test_access": false
+}

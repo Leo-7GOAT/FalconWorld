@@ -108,6 +108,56 @@
       "checkpoint_load": "all nine final checkpoints loaded through official PPO.load and evaluated",
       "result": "Pure PPO 48/48 ID and 48/48 OOD completed. Learned-world-model assisted PPO 34/48 ID,28/48 OOD; no demonstrated lateral benefit.",
       "limits": "Known reference, privileged simulator actuators, synthetic parameters, no obstacles, steering oscillation, no visual inputs or hardware deployment."
+    },
+    "ackermann_model_gradient": {
+      "date": "2026-11-06",
+      "full_suite": {
+        "passed": 138,
+        "subtests_passed": 31,
+        "seconds": 18.37
+      },
+      "published_copy_new_tests": {
+        "passed": 3,
+        "seconds": 3.46
+      },
+      "selection": "two candidates, two training seeds; validation only; configuration frozen before fresh final tests",
+      "long_budget": {
+        "training_seeds": [
+          3,
+          4,
+          5
+        ],
+        "methods": 5,
+        "test_episodes": 600,
+        "audit_errors": 0,
+        "audited_transitions": 55653,
+        "online_steps": 65536,
+        "ppo_completed": 117,
+        "wm_completed": 119,
+        "ppo_id_rmse": 0.10024935583752485,
+        "wm_id_rmse": 0.07528804906420809,
+        "ppo_ood_rmse": 0.13231042234457796,
+        "wm_ood_rmse": 0.08683451351106336
+      },
+      "short_budget": {
+        "training_seeds": [
+          6,
+          7,
+          8
+        ],
+        "methods": 5,
+        "test_episodes": 600,
+        "audit_errors": 0,
+        "audited_transitions": 35990,
+        "main_online_steps": 16384,
+        "ppo_completed": 21,
+        "wm_completed": 120,
+        "extra_online_ppo_steps": 20480,
+        "extra_online_ppo_completed": 39,
+        "wm_native_interactions": 19384
+      },
+      "cost": "Model methods additionally use3000 offline interactions,256 actor warm-start Adam calls and model computations. Warm+training about2.61x/3.04x pure PPO; pretraining and selection extra.",
+      "limitations": "Only3 training seeds per experiment. Long-budget ID return CI crosses0. Rich physics similarly helps; learned residual superiority not proven. Simulation only."
     }
   }
 }
